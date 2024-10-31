@@ -1,0 +1,5 @@
+# 将所有文本文件的行结束符设置为 LF
+* text=auto
+
+# 对于特定文件类型，使用 CRLF
+*.bat text eol=crlf
