@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('114', '协议', 'heavy.DevHeavyOva7000Old', '老OVA7000重金属协议');

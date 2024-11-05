@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('115', '协议', 'SampleDR803B', '德润DR803B留样器');

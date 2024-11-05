@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('94', '协议', 'DevModbusNblg', '宁波理工协议');

@@ -1,0 +1,72 @@
+{
+  "app": {
+    "name": "水质监测站通用控制软件",
+    "description": "Ng-zorro admin panel front-end framework"
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/img/avatar.jpg",
+    "email": "cipchk@qq.com"
+  },
+  "menu": [{
+    "children": [{
+        "text": "系统流程",
+        "icon": "anticon anticon-dashboard",
+        "link": "/dashboard/data",
+        "type": 1
+      },
+      {
+        "text": "实时数据",
+        "icon": "anticon anticon-layout",
+        "link": "/instrument/data",
+        "type": 1
+      },
+      {
+        "text": "历史数据",
+        "icon": "anticon anticon-line-chart",
+        "link": "/history/data",
+        "type": 1
+      },
+      {
+        "text": "日志查询",
+        "icon": "anticon anticon-database",
+        "link": "/logs/data",
+        "type": 1
+      },
+      {
+        "text": "系统设置",
+        "icon": "anticon anticon-setting",
+        "link": "/settings",
+        "type": 2,
+        "children": [
+          {
+            "text": "控制调试",
+            "link": "/settings/debugg",
+            "type": 2
+          },
+          {
+            "text": "基本设置",
+            "link": "/settings/basic",
+            "type": 2
+          },
+          {
+            "text": "高级设置",
+            "link": "/settings/admin",
+            "type": 3
+          },
+          {
+            "text": "关于系统",
+            "link": "/settings/version",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "text": "视频监控",
+        "icon": "anticon anticon-video-camera",
+        "link": "/camera/data",
+        "type": 1
+      }
+    ]
+  }]
+}

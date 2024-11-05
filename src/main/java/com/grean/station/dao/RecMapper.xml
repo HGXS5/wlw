@@ -1,0 +1,2337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.grean.station.dao.RecMapper">
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecDataReg" id="RecDataRegMap">
+        <result property="devID" column="dev_id"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="recTime" column="time"/>
+        <result property="p1" column="p1"/>
+        <result property="p2" column="p2"/>
+        <result property="p3" column="p3"/>
+        <result property="p4" column="p4"/>
+        <result property="p5" column="p5"/>
+        <result property="p6" column="p6"/>
+        <result property="p7" column="p7"/>
+        <result property="p8" column="p8"/>
+        <result property="p9" column="p9"/>
+        <result property="p10" column="p10"/>
+        <result property="p11" column="p11"/>
+        <result property="p12" column="p12"/>
+        <result property="p13" column="p13"/>
+        <result property="p14" column="p14"/>
+        <result property="p15" column="p15"/>
+        <result property="p16" column="p16"/>
+        <result property="p17" column="p17"/>
+        <result property="p18" column="p18"/>
+        <result property="p19" column="p19"/>
+        <result property="p20" column="p20"/>
+        <result property="p21" column="p21"/>
+        <result property="p22" column="p22"/>
+        <result property="p23" column="p23"/>
+        <result property="p24" column="p24"/>
+        <result property="p25" column="p25"/>
+        <result property="p26" column="p26"/>
+        <result property="p27" column="p27"/>
+        <result property="p28" column="p28"/>
+        <result property="p29" column="p29"/>
+        <result property="p30" column="p30"/>
+        <result property="p31" column="p31"/>
+        <result property="p32" column="p32"/>
+        <result property="p33" column="p33"/>
+        <result property="p34" column="p34"/>
+        <result property="p35" column="p35"/>
+        <result property="p36" column="p36"/>
+        <result property="p37" column="p37"/>
+        <result property="p38" column="p38"/>
+        <result property="p39" column="p39"/>
+        <result property="p40" column="p40"/>
+        <result property="p41" column="p41"/>
+        <result property="p42" column="p42"/>
+        <result property="p43" column="p43"/>
+        <result property="p44" column="p44"/>
+        <result property="p45" column="p45"/>
+        <result property="p46" column="p46"/>
+        <result property="p47" column="p47"/>
+        <result property="p48" column="p48"/>
+        <result property="p49" column="p49"/>
+        <result property="p50" column="p50"/>
+        <result property="p51" column="p51"/>
+        <result property="p52" column="p52"/>
+        <result property="p53" column="p53"/>
+        <result property="p54" column="p54"/>
+        <result property="p55" column="p55"/>
+        <result property="p56" column="p56"/>
+        <result property="p57" column="p57"/>
+        <result property="p58" column="p58"/>
+        <result property="p59" column="p59"/>
+        <result property="p60" column="p60"/>
+    </resultMap>
+
+    <select id="getRecDataRegList" resultMap="RecDataRegMap">
+        SELECT *
+        from rec_dev_state;
+    </select>
+
+    <insert id="addRecDataReg" useGeneratedKeys="true">
+        INSERT INTO rec_dev_state
+        (dev_id, factor_id, time, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56, p57, p58, p59, p60)
+        VALUES
+        (#{devID}, #{factorID}, #{recTime}, #{p1}, #{p2}, #{p3}, #{p4}, #{p5}, #{p6}, #{p7}, #{p8}, #{p9}, #{p10}, #{p11}, #{p12}, #{p13}, #{p14}, #{p15}, #{p16}, #{p17}, #{p18}, #{p19}, #{p20}, #{p21}, #{p22}, #{p23}, #{p24}, #{p25}, #{p26}, #{p27}, #{p28}, #{p29}, #{p30}, #{p31}, #{p32}, #{p33}, #{p34}, #{p35}, #{p36}, #{p37}, #{p38}, #{p39}, #{p40}, #{p41}, #{p42}, #{p43}, #{p44}, #{p45}, #{p46}, #{p47}, #{p48}, #{p49}, #{p50}, #{p51}, #{p52}, #{p53}, #{p54}, #{p55}, #{p56}, #{p57}, #{p58}, #{p59}, #{p60});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecDataTime" id="RecDataTimeMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="sendTime1" column="send_time1"/>
+        <result property="sendTime2" column="send_time2"/>
+        <result property="sendTime3" column="send_time3"/>
+        <result property="sendTime4" column="send_time4"/>
+        <result property="sendTime5" column="send_time5"/>
+        <result property="sendTime6" column="send_time6"/>
+        <result property="sendTime7" column="send_time7"/>
+        <result property="sendTime8" column="send_time8"/>
+        <result property="sendTime9" column="send_time9"/>
+        <result property="sendTime10" column="send_time10"/>
+    </resultMap>
+
+    <select id="getRecTimeMinList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_min;
+    </select>
+
+    <select id="getRecTimeMinListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_min
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecTimeMinListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_min
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeMin" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_min order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeMinByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_min
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecTimeMin" useGeneratedKeys="true">
+        INSERT INTO rec_data_min
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecTimeMin1">
+        UPDATE rec_data_min SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin2">
+        UPDATE rec_data_min SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin3">
+        UPDATE rec_data_min SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin4">
+        UPDATE rec_data_min SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin5">
+        UPDATE rec_data_min SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin6">
+        UPDATE rec_data_min SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin7">
+        UPDATE rec_data_min SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin8">
+        UPDATE rec_data_min SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin9">
+        UPDATE rec_data_min SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMin10">
+        UPDATE rec_data_min SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecTimeMinAvgList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_min;
+    </select>
+
+    <select id="getRecTimeMinAvgListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_min
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecTimeMinAvgListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_min
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeMinAvg" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_min order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeMinAvgByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_min
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecTimeMinAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_min
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecTimeMinAvg1">
+        UPDATE rec_avg_min SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg2">
+        UPDATE rec_avg_min SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg3">
+        UPDATE rec_avg_min SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg4">
+        UPDATE rec_avg_min SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg5">
+        UPDATE rec_avg_min SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg6">
+        UPDATE rec_avg_min SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg7">
+        UPDATE rec_avg_min SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg8">
+        UPDATE rec_avg_min SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg9">
+        UPDATE rec_avg_min SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMinAvg10">
+        UPDATE rec_avg_min SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecTimeHourList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_hour;
+    </select>
+
+    <select id="getRecTimeHourListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <!--<select id="getRecTimeHourListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>-->
+
+    <select id="getRecTimeHourListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getRecTimeRangeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_range
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getRecTimeFlowListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_flow
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeHour" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_hour order by id desc limit 1;
+    </select>
+
+    <select id="getLastRecTimeFlow" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_flow order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeHourByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where rec_time = #{0};
+    </select>
+
+    <select id="getRecTimeRangeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_range
+        where rec_time = #{0};
+    </select>
+
+    <select id="getRecTimeFlowByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_flow
+        where rec_time = #{0};
+    </select>
+
+    <select id="getRecTimeParamByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_dev_param
+        where rec_time = #{0};
+    </select>
+
+
+    <insert id="addRecTimeHour" useGeneratedKeys="true">
+        INSERT INTO rec_data_hour
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <insert id="addRecTimeRange" useGeneratedKeys="true">
+        INSERT INTO rec_data_range
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <insert id="addRecTimeFlow" useGeneratedKeys="true">
+        INSERT INTO rec_data_flow
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <insert id="addRecTimeParam" useGeneratedKeys="true">
+        INSERT INTO rec_dev_param
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+
+    <update id="updateRecTimeHour1">
+        UPDATE rec_data_hour SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour2">
+        UPDATE rec_data_hour SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour3">
+        UPDATE rec_data_hour SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour4">
+        UPDATE rec_data_hour SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour5">
+        UPDATE rec_data_hour SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour6">
+        UPDATE rec_data_hour SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour7">
+        UPDATE rec_data_hour SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour8">
+        UPDATE rec_data_hour SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour9">
+        UPDATE rec_data_hour SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHour10">
+        UPDATE rec_data_hour SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <select id="getRecTimeHour1" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time1 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour2" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time2 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour3" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time3 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour4" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time4 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour5" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time5 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour6" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time6 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour7" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time7 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour8" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time8 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour9" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time9 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHour10" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_hour
+        where send_time10 is NULL
+        order by id desc limit 10;
+    </select>
+
+    <select id="getRecTimeHourAvgList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_hour;
+    </select>
+
+    <select id="getRecTimeHourAvgListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_hour
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecTimeHourAvgListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_hour
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeHourAvg" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_hour order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeHourAvgByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_hour
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecTimeHourAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_hour
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecTimeHourAvg1">
+        UPDATE rec_avg_hour SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg2">
+        UPDATE rec_avg_hour SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg3">
+        UPDATE rec_avg_hour SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg4">
+        UPDATE rec_avg_hour SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg5">
+        UPDATE rec_avg_hour SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg6">
+        UPDATE rec_avg_hour SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg7">
+        UPDATE rec_avg_hour SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg8">
+        UPDATE rec_avg_hour SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg9">
+        UPDATE rec_avg_hour SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeHourAvg10">
+        UPDATE rec_avg_hour SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecTimeDayAvgList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_day;
+    </select>
+
+    <select id="getRecTimeDayAvgListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_day
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecTimeDayAvgListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_day
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeDayAvg" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_day order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeDayAvgByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_day
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecTimeDayAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_day
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecTimeDayAvg1">
+        UPDATE rec_avg_day SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg2">
+        UPDATE rec_avg_day SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg3">
+        UPDATE rec_avg_day SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg4">
+        UPDATE rec_avg_day SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg5">
+        UPDATE rec_avg_day SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg6">
+        UPDATE rec_avg_day SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg7">
+        UPDATE rec_avg_day SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg8">
+        UPDATE rec_avg_day SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg9">
+        UPDATE rec_avg_day SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeDayAvg10">
+        UPDATE rec_avg_day SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecTimeMonthAvgList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_month;
+    </select>
+
+    <select id="getRecTimeMonthAvgListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_month
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecTimeMonthAvgListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_month
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeMonthAvg" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_avg_month order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeMonthAvgByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_avg_month
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecTimeMonthAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_month
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecTimeMonthAvg1">
+        UPDATE rec_avg_month SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg2">
+        UPDATE rec_avg_month SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg3">
+        UPDATE rec_avg_month SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg4">
+        UPDATE rec_avg_month SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg5">
+        UPDATE rec_avg_month SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg6">
+        UPDATE rec_avg_month SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg7">
+        UPDATE rec_avg_month SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg8">
+        UPDATE rec_avg_month SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg9">
+        UPDATE rec_avg_month SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeMonthAvg10">
+        UPDATE rec_avg_month SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecTimeFiveList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_five;
+    </select>
+
+    <select id="getRecTimeFiveListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_five
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecTimeFiveListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_five
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecTimeFive" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_data_five order by id desc limit 1;
+    </select>
+
+    <select id="getRecTimeFiveByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_data_five
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecTimeFive" useGeneratedKeys="true">
+        INSERT INTO rec_data_five
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecTimeFive1">
+        UPDATE rec_data_five SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive2">
+        UPDATE rec_data_five SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive3">
+        UPDATE rec_data_five SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive4">
+        UPDATE rec_data_five SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive5">
+        UPDATE rec_data_five SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive6">
+        UPDATE rec_data_five SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive7">
+        UPDATE rec_data_five SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive8">
+        UPDATE rec_data_five SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive9">
+        UPDATE rec_data_five SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecTimeFive10">
+        UPDATE rec_data_five SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <select id="getRecCheckZeroTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_zero;
+    </select>
+
+    <select id="getRecCheckZeroTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_zero
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckZeroTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_zero
+        where rec_time = #{0};
+    </select>
+
+    <select id="getRecCheckZeroTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_zero
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckZeroTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_zero order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckZeroTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_zero
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckZeroTime1">
+        UPDATE rec_check_zero SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime2">
+        UPDATE rec_check_zero SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime3">
+        UPDATE rec_check_zero SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime4">
+        UPDATE rec_check_zero SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime5">
+        UPDATE rec_check_zero SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime6">
+        UPDATE rec_check_zero SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime7">
+        UPDATE rec_check_zero SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime8">
+        UPDATE rec_check_zero SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime9">
+        UPDATE rec_check_zero SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckZeroTime10">
+        UPDATE rec_check_zero SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <select id="getRecCheckSpanTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_span;
+    </select>
+
+    <select id="getRecCheckSpanTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_span
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckSpanTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_span
+        where rec_time = #{0};
+    </select>
+
+    <select id="getRecCheckSpanTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_span
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckSpanTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_span order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckSpanTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_span
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckSpanTime1">
+        UPDATE rec_check_span SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime2">
+        UPDATE rec_check_span SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime3">
+        UPDATE rec_check_span SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime4">
+        UPDATE rec_check_span SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime5">
+        UPDATE rec_check_span SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime6">
+        UPDATE rec_check_span SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime7">
+        UPDATE rec_check_span SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime8">
+        UPDATE rec_check_span SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime9">
+        UPDATE rec_check_span SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckSpanTime10">
+        UPDATE rec_check_span SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecCheckRcvrTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_rcvr;
+    </select>
+
+    <select id="getRecCheckRcvrTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_rcvr
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckRcvrTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_rcvr
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckRcvrTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_rcvr order by id desc limit 1;
+    </select>
+
+    <select id="getRecCheckRcvrTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_rcvr
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecCheckRcvrTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_rcvr
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckRcvrTime1">
+        UPDATE rec_check_rcvr SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime2">
+        UPDATE rec_check_rcvr SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime3">
+        UPDATE rec_check_rcvr SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime4">
+        UPDATE rec_check_rcvr SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime5">
+        UPDATE rec_check_rcvr SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime6">
+        UPDATE rec_check_rcvr SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime7">
+        UPDATE rec_check_rcvr SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime8">
+        UPDATE rec_check_rcvr SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime9">
+        UPDATE rec_check_rcvr SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckRcvrTime10">
+        UPDATE rec_check_rcvr SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <select id="getRecCheckStdTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_std;
+    </select>
+
+    <select id="getRecCheckStdTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_std
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckStdTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_std
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckStdTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_std order by id desc limit 1;
+    </select>
+
+    <select id="getRecCheckStdTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_std
+        where rec_time = #{0}
+        order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckStdTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_std
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckStdTime1">
+        UPDATE rec_check_std SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime2">
+        UPDATE rec_check_std SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime3">
+        UPDATE rec_check_std SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime4">
+        UPDATE rec_check_std SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime5">
+        UPDATE rec_check_std SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime6">
+        UPDATE rec_check_std SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime7">
+        UPDATE rec_check_std SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime8">
+        UPDATE rec_check_std SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime9">
+        UPDATE rec_check_std SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckStdTime10">
+        UPDATE rec_check_std SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <select id="getRecCheckParTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_par;
+    </select>
+
+    <select id="getRecCheckParTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_par
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckParTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_par
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckParTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_par order by id desc limit 1;
+    </select>
+
+    <select id="getRecCheckParTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_par
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecCheckParTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_par
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckParTime1">
+        UPDATE rec_check_par SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime2">
+        UPDATE rec_check_par SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime3">
+        UPDATE rec_check_par SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime4">
+        UPDATE rec_check_par SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime5">
+        UPDATE rec_check_par SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime6">
+        UPDATE rec_check_par SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime7">
+        UPDATE rec_check_par SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime8">
+        UPDATE rec_check_par SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime9">
+        UPDATE rec_check_par SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckParTime10">
+        UPDATE rec_check_par SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecCheckBlankTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_blank;
+    </select>
+
+    <select id="getRecCheckBlankTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_blank
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckBlankTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_blank
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckBlankTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_blank order by id desc limit 1;
+    </select>
+
+    <select id="getRecCheckBlankTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_blank
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecCheckBlankTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_blank
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckBlankTime1">
+        UPDATE rec_check_blank SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime2">
+        UPDATE rec_check_blank SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime3">
+        UPDATE rec_check_blank SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime4">
+        UPDATE rec_check_blank SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime5">
+        UPDATE rec_check_blank SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime6">
+        UPDATE rec_check_blank SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime7">
+        UPDATE rec_check_blank SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime8">
+        UPDATE rec_check_blank SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime9">
+        UPDATE rec_check_blank SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckBlankTime10">
+        UPDATE rec_check_blank SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+    <select id="getRecCheckFiveTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_five;
+    </select>
+
+    <select id="getRecCheckFiveTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_five
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecCheckFiveTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_five
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecCheckFiveTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_check_five order by id desc limit 1;
+    </select>
+
+    <select id="getRecCheckFiveTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_check_five
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecCheckFiveTime" useGeneratedKeys="true">
+        INSERT INTO rec_check_five
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecCheckFiveTime1">
+        UPDATE rec_check_five SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime2">
+        UPDATE rec_check_five SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime3">
+        UPDATE rec_check_five SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime4">
+        UPDATE rec_check_five SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime5">
+        UPDATE rec_check_five SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime6">
+        UPDATE rec_check_five SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime7">
+        UPDATE rec_check_five SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime8">
+        UPDATE rec_check_five SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime9">
+        UPDATE rec_check_five SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecCheckFiveTime10">
+        UPDATE rec_check_five SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+
+
+    <select id="getRecLogSysTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_log_sys;
+    </select>
+
+    <select id="getRecLogSysTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_log_sys
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecLogSysTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_log_sys
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecLogSysTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_log_sys order by id desc limit 1;
+    </select>
+
+    <select id="getRecLogSysTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_log_sys
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecLogSysTime" useGeneratedKeys="true">
+        INSERT INTO rec_log_sys
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecLogSysTime1">
+        UPDATE rec_log_sys SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime2">
+        UPDATE rec_log_sys SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime3">
+        UPDATE rec_log_sys SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime4">
+        UPDATE rec_log_sys SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime5">
+        UPDATE rec_log_sys SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime6">
+        UPDATE rec_log_sys SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime7">
+        UPDATE rec_log_sys SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime8">
+        UPDATE rec_log_sys SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime9">
+        UPDATE rec_log_sys SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecLogSysTime10">
+        UPDATE rec_log_sys SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <select id="getRecLogDevTimeList" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_log_dev;
+    </select>
+
+    <select id="getRecLogDevTimeListByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_log_dev
+        where rec_time BETWEEN #{0} and #{1};
+    </select>
+
+    <select id="getRecLogDevTimeListByRange" resultMap="RecDataTimeMap">
+        SELECT * from rec_log_dev
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecLogDevTime" resultMap="RecDataTimeMap">
+        SELECT *
+        from rec_log_dev order by id desc limit 1;
+    </select>
+
+    <select id="getRecLogDevTimeByTime" resultMap="RecDataTimeMap">
+        SELECT * from rec_log_dev
+        where rec_time = #{0};
+    </select>
+
+    <insert id="addRecLogDevTime" useGeneratedKeys="true">
+        INSERT INTO rec_log_dev
+        (rec_time, send_time1, send_time2, send_time3, send_time4, send_time5, send_time6, send_time7, send_time8, send_time9, send_time10)
+        VALUES
+        (#{recTime}, #{sendTime1}, #{sendTime2}, #{sendTime3}, #{sendTime4}, #{sendTime5}, #{sendTime6}, #{sendTime7}, #{sendTime8}, #{sendTime9}, #{sendTime10});
+
+        <selectKey order="AFTER" keyProperty="id"  resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+
+    </insert>
+
+    <update id="updateRecLogDevTime1">
+        UPDATE rec_log_dev SET send_time1 = #{sendTime1} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime2">
+        UPDATE rec_log_dev SET send_time2 = #{sendTime2} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime3">
+        UPDATE rec_log_dev SET send_time3 = #{sendTime3} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime4">
+        UPDATE rec_log_dev SET send_time4 = #{sendTime4} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime5">
+        UPDATE rec_log_dev SET send_time5 = #{sendTime5} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime6">
+        UPDATE rec_log_dev SET send_time6 = #{sendTime6} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime7">
+        UPDATE rec_log_dev SET send_time7 = #{sendTime7} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime8">
+        UPDATE rec_log_dev SET send_time8 = #{sendTime8} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime9">
+        UPDATE rec_log_dev SET send_time9 = #{sendTime9} where id=#{id};
+    </update>
+
+    <update id="updateRecLogDevTime10">
+        UPDATE rec_log_dev SET send_time10 = #{sendTime10} where id=#{id};
+    </update>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecDataFactor" id="RecDataFactorMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="dataTime" column="d_time"/>
+        <result property="dataValue" column="d_value"/>
+        <result property="dataFlag" column="d_flag"/>
+        <result property="isAlarm" column="is_alarm"/>
+        <result property="alarmValue" column="alarm_value"/>
+        <result property="alarmType" column="alarm_type"/>
+    </resultMap>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecDataAvg" id="RecDataAvgMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="dataTime" column="d_time"/>
+        <result property="dataValue" column="d_value"/>
+        <result property="dataFlag" column="d_flag"/>
+        <result property="isAlarm" column="is_alarm"/>
+        <result property="alarmValue" column="alarm_value"/>
+        <result property="alarmType" column="alarm_type"/>
+        <result property="dataMin" column="d_min"/>
+        <result property="dataMax" column="d_max"/>
+        <result property="dataCou" column="d_cou"/>
+    </resultMap>
+
+    <select id="getRecDataMinList" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_min_factor;
+    </select>
+
+    <select id="getRecDataMinListByTime" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_min_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataMinListByRange" resultMap="RecDataFactorMap">
+        SELECT * from rec_data_min_factor
+        where d_time BETWEEN #{startDate} and #{endDate}
+        order by id;
+    </select>
+
+    <insert id="addRecDataMin" useGeneratedKeys="true">
+        INSERT INTO rec_data_min_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType});
+    </insert>
+
+
+    <select id="getRecDataMinAvgList" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_min_factor;
+    </select>
+
+    <select id="getRecDataMinAvgListByTime" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_min_factor where rec_id = #{id};
+    </select>
+
+    <insert id="addRecDataMinAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_min_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type, d_min, d_max, d_cou)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType}, #{dataMin}, #{dataMax}, #{dataCou});
+    </insert>
+
+
+    <select id="getRecDataHourList" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_hour_factor;
+    </select>
+
+    <select id="getRecDataHourListByTime" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_hour_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataHourListByRange" resultMap="RecDataFactorMap">
+        SELECT * from rec_data_hour_factor
+        where d_time BETWEEN #{startDate} and #{endDate}
+        order by d_time;
+    </select>
+
+    <select id="getRecDataRangeListByTime" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_range_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataFlowListByTime" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_flow_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataParamListByTime" resultType="com.grean.station.domain.DO.rec.RecDevParam">
+        SELECT *
+        from rec_dev_param_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataHourListByIdRange" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_hour_factor where rec_id BETWEEN  #{0} and #{1};
+    </select>
+
+    <select id="getRecDataRangeListByIdRange" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_range_factor where rec_id BETWEEN  #{0} and #{1};
+    </select>
+
+    <select id="getRecDataFlowListByIdRange" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_flow_factor where rec_id BETWEEN  #{0} and #{1};
+    </select>
+
+    <select id="getRecDataParamListByIdRange" resultType="com.grean.station.domain.DO.rec.RecDevParam">
+        SELECT *
+        from rec_dev_param_factor where rec_id BETWEEN  #{0} and #{1};
+    </select>
+
+
+    <select id="getLastRecDataHour" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_hour_factor where factor_id = #{id} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecDataHour" useGeneratedKeys="true">
+        INSERT INTO rec_data_hour_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType});
+    </insert>
+
+    <insert id="addRecDataRange" useGeneratedKeys="true">
+        INSERT INTO rec_data_range_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType});
+    </insert>
+
+    <insert id="addRecDataFlow" useGeneratedKeys="true">
+        INSERT INTO rec_data_flow_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType});
+    </insert>
+
+    <insert id="addRecDataParam" useGeneratedKeys="true">
+        INSERT INTO rec_dev_param_factor
+        (rec_id, rec_time, factor_id, param_name, param_value, param_type)
+        VALUES
+        (#{rec_id}, #{rec_time}, #{factor_id}, #{param_name}, #{param_value}, #{param_type});
+    </insert>
+
+
+    <select id="getRecDataHourAvgList" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_hour_factor;
+    </select>
+
+    <select id="getRecDataHourAvgListByTime" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_hour_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataHourAvgListByRange" resultMap="RecDataFactorMap">
+        SELECT * from rec_avg_hour_factor
+        where d_time BETWEEN #{startDate} and #{endDate}
+        order by id;
+    </select>
+
+    <insert id="addRecDataHourAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_hour_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type, d_min, d_max, d_cou)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType}, #{dataMin}, #{dataMax}, #{dataCou});
+    </insert>
+
+
+    <select id="getRecDataDayAvgList" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_day_factor;
+    </select>
+
+    <select id="getRecDataDayAvgListByTime" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_day_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataDayAvgListByRange" resultMap="RecDataFactorMap">
+        SELECT * from rec_avg_day_factor
+        where d_time BETWEEN #{startDate} and #{endDate}
+        order by id;
+    </select>
+
+    <insert id="addRecDataDayAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_day_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type, d_min, d_max, d_cou)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType}, #{dataMin}, #{dataMax}, #{dataCou});
+    </insert>
+
+
+    <select id="getRecDataMonthAvgList" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_month_factor;
+    </select>
+
+    <select id="getRecDataMonthAvgListByTime" resultMap="RecDataAvgMap">
+        SELECT *
+        from rec_avg_month_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataMonthAvgListByRange" resultMap="RecDataFactorMap">
+        SELECT * from rec_avg_month_factor
+        where d_time BETWEEN #{startDate} and #{endDate}
+        order by id;
+    </select>
+
+    <insert id="addRecDataMonthAvg" useGeneratedKeys="true">
+        INSERT INTO rec_avg_month_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type, d_min, d_max, d_cou)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType}, #{dataMin}, #{dataMax}, #{dataCou});
+    </insert>
+
+
+    <select id="getRecDataFiveList" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_five_factor;
+    </select>
+
+    <select id="getRecDataFiveListByTime" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_five_factor where rec_id = #{id};
+    </select>
+
+    <select id="getRecDataFiveListByIdRange" resultMap="RecDataFactorMap">
+        SELECT *
+        from rec_data_five_factor where rec_id BETWEEN  #{0} and #{1};
+    </select>
+
+    <insert id="addRecDataFive" useGeneratedKeys="true">
+        INSERT INTO rec_data_five_factor
+        (rec_id, factor_id, d_time, d_value, d_flag, is_alarm, alarm_value, alarm_type)
+        VALUES
+        (#{recID}, #{factorID}, #{dataTime}, #{dataValue}, #{dataFlag}, #{isAlarm}, #{alarmValue}, #{alarmType});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecCheckZero" id="RecCheckZeroMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="curValue" column="cur_value"/>
+        <result property="preValue" column="pre_value"/>
+        <result property="stdValue" column="std_value"/>
+        <result property="spanValue" column="span_value"/>
+        <result property="aError" column="a_error"/>
+        <result property="rError" column="r_error"/>
+        <result property="aResult" column="a_result"/>
+        <result property="rResult" column="r_result"/>
+        <result property="dataFlag" column="d_flag"/>
+    </resultMap>
+
+    <select id="getRecCheckZeroDataList" resultMap="RecCheckZeroMap">
+        SELECT *
+        from rec_check_zero_factor;
+    </select>
+
+    <select id="getRecCheckZeroDataListByTime" resultMap="RecCheckZeroMap">
+        SELECT *
+        from rec_check_zero_factor where rec_id = #{id};
+    </select>
+
+    <select id="getLastRecCheckZeroData" resultMap="RecCheckZeroMap">
+        SELECT *
+        from rec_check_zero_factor where factor_id = #{id} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckZeroData" useGeneratedKeys="true">
+        INSERT INTO rec_check_zero_factor
+        (rec_id, rec_time, factor_id, cur_value, pre_value, std_value, span_value, a_error, r_error, a_result, r_result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{curValue}, #{preValue}, #{stdValue}, #{spanValue}, #{aError}, #{rError}, #{aResult}, #{rResult}, #{dataFlag});
+    </insert>
+
+    <select id="getRecCheckSpanDataList" resultMap="RecCheckZeroMap">
+        SELECT *
+        from rec_check_span_factor;
+    </select>
+
+    <select id="getRecCheckSpanDataListByTime" resultMap="RecCheckZeroMap">
+        SELECT *
+        from rec_check_span_factor where rec_id = #{id};
+    </select>
+
+    <select id="getLastRecCheckSpanData" resultMap="RecCheckZeroMap">
+        SELECT *
+        from rec_check_span_factor where factor_id = #{id} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckSpanData" useGeneratedKeys="true">
+        INSERT INTO rec_check_span_factor
+        (rec_id, rec_time, factor_id, cur_value, pre_value, std_value, span_value, a_error, r_error, a_result, r_result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{curValue}, #{preValue}, #{stdValue}, #{spanValue}, #{aError}, #{rError}, #{aResult}, #{rResult}, #{dataFlag});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecCheckRcvr" id="RecCheckRcvrMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="beforeValue" column="before_value"/>
+        <result property="beforeTime" column="before_time"/>
+        <result property="afterValue" column="after_value"/>
+        <result property="afterTime" column="after_time"/>
+        <result property="motherValue" column="mother_value"/>
+        <result property="motherVolume" column="mother_volume"/>
+        <result property="cupVolume" column="cup_volume"/>
+        <result property="rcvrRate" column="rcvr_rate"/>
+        <result property="result" column="result"/>
+        <result property="dataFlag" column="d_flag"/>
+    </resultMap>
+
+    <select id="getRecCheckRcvrDataList" resultMap="RecCheckRcvrMap">
+        SELECT *
+        from rec_check_rcvr_factor;
+    </select>
+
+    <select id="getRecCheckRcvrDataListByTime" resultMap="RecCheckRcvrMap">
+        SELECT *
+        from rec_check_rcvr_factor where rec_id = #{id};
+    </select>
+
+    <insert id="addRecCheckRcvrData" useGeneratedKeys="true">
+        INSERT INTO rec_check_rcvr_factor
+        (rec_id, rec_time, factor_id, before_value, before_time, after_value, after_time, mother_value, mother_volume, cup_volume, rcvr_rate, result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{beforeValue}, #{beforeTime}, #{afterValue}, #{afterTime}, #{motherValue}, #{motherVolume}, #{cupVolume}, #{rcvrRate}, #{result}, #{dataFlag});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecCheckStd" id="RecCheckStdMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="testValue" column="test_value"/>
+        <result property="stdValue" column="std_value"/>
+        <result property="aError" column="a_error"/>
+        <result property="rError" column="r_error"/>
+        <result property="aResult" column="a_result"/>
+        <result property="rResult" column="r_result"/>
+        <result property="dataFlag" column="d_flag"/>
+    </resultMap>
+
+    <select id="getRecCheckStdDataList" resultMap="RecCheckStdMap">
+        SELECT *
+        from rec_check_std_factor;
+    </select>
+
+    <select id="getRecCheckStdDataListByTime" resultMap="RecCheckStdMap">
+        SELECT *
+        from rec_check_std_factor where rec_id = #{id};
+    </select>
+
+    <insert id="addRecCheckStdData" useGeneratedKeys="true">
+        INSERT INTO rec_check_std_factor
+        (rec_id, rec_time, factor_id, test_value, std_value, a_error, r_error, a_result, r_result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{testValue}, #{stdValue}, #{aError}, #{rError}, #{aResult}, #{rResult}, #{dataFlag});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecCheckPar" id="RecCheckParMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="value1st" column="value_1st"/>
+        <result property="value2nd" column="value_2nd"/>
+        <result property="valueRange" column="value_range"/>
+        <result property="parRate" column="par_rate"/>
+        <result property="result" column="result"/>
+        <result property="dataFlag" column="d_flag"/>
+    </resultMap>
+
+    <select id="getRecCheckParDataList" resultMap="RecCheckParMap">
+        SELECT *
+        from rec_check_par_factor;
+    </select>
+
+    <select id="getRecCheckParDataListByTime" resultMap="RecCheckParMap">
+        SELECT *
+        from rec_check_par_factor where rec_id = #{id};
+    </select>
+
+    <insert id="addRecCheckParData" useGeneratedKeys="true">
+        INSERT INTO rec_check_par_factor
+        (rec_id, rec_time, factor_id, value_1st, value_2nd, value_range, par_rate, result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{value1st}, #{value2nd}, #{valueRange}, #{parRate}, #{result}, #{dataFlag});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecCheckBlank" id="RecCheckBlankMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="curValue" column="cur_value"/>
+        <result property="preValue" column="pre_value"/>
+        <result property="rangeValue" column="range_value"/>
+        <result property="rError" column="r_error"/>
+        <result property="rResult" column="r_result"/>
+        <result property="dataFlag" column="d_flag"/>
+    </resultMap>
+
+    <select id="getRecCheckBlankDataList" resultMap="RecCheckBlankMap">
+        SELECT *
+        from rec_check_blank_factor;
+    </select>
+
+    <select id="getRecCheckBlankDataListByTime" resultMap="RecCheckBlankMap">
+        SELECT *
+        from rec_check_blank_factor where rec_id = #{id};
+    </select>
+
+    <select id="getLastRecCheckBlankData" resultMap="RecCheckBlankMap">
+        SELECT *
+        from rec_check_blank_factor where factor_id = #{id} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckBlankData" useGeneratedKeys="true">
+        INSERT INTO rec_check_blank_factor
+        (rec_id, rec_time, factor_id, cur_value, pre_value, range_value, r_error, r_result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{curValue}, #{preValue}, #{rangeValue}, #{rError}, #{rResult}, #{dataFlag});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecCheckFive" id="RecCheckFiveMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="curValue" column="cur_value"/>
+        <result property="stdValue" column="std_value"/>
+        <result property="stdLevel" column="std_level"/>
+        <result property="aError" column="a_error"/>
+        <result property="aResult" column="a_result"/>
+        <result property="dataFlag" column="d_flag"/>
+    </resultMap>
+
+    <select id="getRecCheckFiveDataList" resultMap="RecCheckFiveMap">
+        SELECT *
+        from rec_check_five_factor;
+    </select>
+
+    <select id="getRecCheckFiveDataListByTime" resultMap="RecCheckFiveMap">
+        SELECT *
+        from rec_check_five_factor where rec_id = #{id};
+    </select>
+
+    <select id="getLastRecCheckFiveData" resultMap="RecCheckFiveMap">
+        SELECT *
+        from rec_check_five_factor where factor_id = #{id} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecCheckFiveData" useGeneratedKeys="true">
+        INSERT INTO rec_check_five_factor
+        (rec_id, rec_time, factor_id, cur_value, std_value, std_level, a_error, a_result, d_flag)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{curValue}, #{stdValue}, #{stdLevel}, #{aError}, #{aResult}, #{dataFlag});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecLogDev" id="RecLogDevMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="logID" column="log_id"/>
+        <result property="logType" column="log_type"/>
+        <result property="logDesc" column="log_desc"/>
+    </resultMap>
+
+    <select id="getRecLogDevList" resultMap="RecLogDevMap">
+        SELECT *
+        from rec_log_dev_detail;
+    </select>
+
+    <select id="getRecLogDevListByTime" resultMap="RecLogDevMap">
+        SELECT *
+        from rec_log_dev_detail where rec_id = #{id};
+    </select>
+
+    <select id="getRecLogDevListByRange" resultMap="RecLogDevMap">
+        SELECT * from rec_log_dev_detail
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecLogDev" resultMap="RecLogDevMap">
+        SELECT *
+        from rec_log_dev_detail where factor_id = #{0} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecLogDev" useGeneratedKeys="true">
+        INSERT INTO rec_log_dev_detail
+        (rec_id, rec_time, factor_id, log_id, log_type, log_desc)
+        VALUES
+        (#{recID}, #{recTime}, #{factorID}, #{logID}, #{logType}, #{logDesc});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecAlarmDev" id="RecAlarmDevMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="alarmID" column="alarm_id"/>
+        <result property="alarmType" column="alarm_type"/>
+        <result property="alarmDesc" column="alarm_desc"/>
+    </resultMap>
+
+    <select id="getRecAlarmDevList" resultMap="RecAlarmDevMap">
+        SELECT *
+        from rec_alarm_dev;
+    </select>
+
+    <select id="getRecAlarmDevListByRange" resultMap="RecAlarmDevMap">
+        SELECT * from rec_alarm_dev
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecAlarmDev" resultMap="RecAlarmDevMap">
+        SELECT *
+        from rec_alarm_dev where factor_id = #{0} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecAlarmDev" useGeneratedKeys="true">
+        INSERT INTO rec_alarm_dev
+        (rec_time, factor_id, alarm_id, alarm_type, alarm_desc)
+        VALUES
+        (#{recTime}, #{factorID}, #{alarmID}, #{alarmType}, #{alarmDesc});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecFaultDev" id="RecFaultDevMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="faultID" column="fault_id"/>
+        <result property="faultType" column="fault_type"/>
+        <result property="faultDesc" column="fault_desc"/>
+    </resultMap>
+
+    <select id="getRecFaultDevList" resultMap="RecFaultDevMap">
+        SELECT *
+        from rec_fault_dev;
+    </select>
+
+    <select id="getLastRecFaultDev" resultMap="RecFaultDevMap">
+        SELECT *
+        from rec_fault_dev where factor_id = #{0} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecFaultDev" useGeneratedKeys="true">
+        INSERT INTO rec_fault_dev
+        (rec_time, factor_id, fault_id, fault_type, fault_desc)
+        VALUES
+        (#{recTime}, #{factorID}, #{faultID}, #{faultType}, #{faultDesc});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecLogSys" id="RecLogSysMap">
+        <result property="id" column="id"/>
+        <result property="recID" column="rec_id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="logType" column="log_type"/>
+        <result property="logDesc" column="log_desc"/>
+    </resultMap>
+
+    <select id="getRecLogSysList" resultMap="RecLogSysMap">
+        SELECT *
+        from rec_log_sys_detail;
+    </select>
+
+    <select id="getRecLogSysListByTime" resultMap="RecLogSysMap">
+        SELECT *
+        from rec_log_sys_detail where rec_id = #{id};
+    </select>
+
+    <select id="getRecLogSysListByRange" resultMap="RecLogSysMap">
+        SELECT * from rec_log_sys_detail
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <insert id="addRecLogSys" useGeneratedKeys="true">
+        INSERT INTO rec_log_sys_detail
+        (rec_id, rec_time, log_type, log_desc)
+        VALUES
+        (#{recID}, #{recTime}, #{logType}, #{logDesc});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecLogUser" id="RecLogUserMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="recUser" column="rec_user"/>
+        <result property="recOperation" column="rec_operation"/>
+    </resultMap>
+
+    <select id="getRecLogUserList" resultMap="RecLogUserMap">
+        SELECT *
+        from rec_log_user;
+    </select>
+
+    <select id="getRecLogUserListByRange" resultMap="RecLogUserMap">
+        SELECT * from rec_log_user
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <insert id="addRecLogUser" useGeneratedKeys="true">
+        INSERT INTO rec_log_user
+        (rec_time, rec_user, rec_operation)
+        VALUES
+        (#{recTime}, #{recUser}, #{recOperation});
+    </insert>
+
+
+    <select id="getRecLogAccessListByRange" resultType="com.grean.station.domain.DO.rec.RecInfoDoor">
+        SELECT * from rec_info_door
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecLogSample" id="RecLogSampleMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="recBottle" column="rec_bottle"/>
+        <result property="recVolumn" column="rec_volumn"/>
+        <result property="recType" column="rec_type"/>
+        <result property="recNote" column="rec_note"/>
+    </resultMap>
+
+    <select id="getRecLogSampleList" resultMap="RecLogSampleMap">
+        SELECT *
+        from rec_log_sample;
+    </select>
+
+    <select id="getRecLogSampleListByRange" resultMap="RecLogSampleMap">
+        SELECT * from rec_log_sample
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <insert id="addRecLogSample" useGeneratedKeys="true">
+        INSERT INTO rec_log_sample
+        (rec_time, rec_bottle, rec_volumn, rec_type, rec_note)
+        VALUES
+        (#{recTime}, #{recBottle}, #{recVolumn}, #{recType}, #{recNote});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecLogPlatform" id="RecLogPlatformMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="recPlatform" column="rec_platform"/>
+        <result property="recType" column="rec_type"/>
+        <result property="recDesc" column="rec_desc"/>
+        <result property="recResult" column="rec_result"/>
+    </resultMap>
+
+    <select id="getRecLogPlatformList" resultMap="RecLogPlatformMap">
+        SELECT *
+        from rec_log_platform;
+    </select>
+
+    <select id="getRecLogPlatformListByRange" resultMap="RecLogPlatformMap">
+        SELECT * from rec_log_platform
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <insert id="addRecLogPlatform" useGeneratedKeys="true">
+        INSERT INTO rec_log_platform
+        (rec_time, rec_platform, rec_type, rec_desc, rec_result)
+        VALUES
+        (#{recTime}, #{recPlatform}, #{recType}, #{recDesc}, #{recResult});
+    </insert>
+
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecAlarmSys" id="RecAlarmSysMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="alarmType" column="alarm_type"/>
+        <result property="alarmDesc" column="alarm_desc"/>
+    </resultMap>
+
+    <select id="getRecAlarmSysList" resultMap="RecAlarmSysMap">
+        SELECT *
+        from rec_alarm_sys;
+    </select>
+
+    <insert id="addRecAlarmSys" useGeneratedKeys="true">
+        INSERT INTO rec_alarm_sys
+        (rec_time, alarm_type, alarm_desc)
+        VALUES
+        (#{recTime}, #{alarmType}, #{alarmDesc});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecFaultSys" id="RecFaultSysMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="faultType" column="fault_type"/>
+        <result property="faultDesc" column="fault_desc"/>
+    </resultMap>
+
+    <select id="getRecFaultSysList" resultMap="RecFaultSysMap">
+        SELECT *
+        from rec_fault_sys;
+    </select>
+
+    <select id="getRecFaultSysListByRange" resultMap="RecFaultSysMap">
+        SELECT * from rec_fault_sys
+        WHERE rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <insert id="addRecFaultSys" useGeneratedKeys="true">
+        INSERT INTO rec_fault_sys
+        (rec_time, fault_type, fault_desc)
+        VALUES
+        (#{recTime}, #{faultType}, #{faultDesc});
+    </insert>
+
+    <resultMap type="com.grean.station.domain.DO.rec.RecAlarmData" id="RecAlarmDataMap">
+        <result property="id" column="id"/>
+        <result property="recTime" column="rec_time"/>
+        <result property="factorID" column="factor_id"/>
+        <result property="alarmValue" column="alarm_value"/>
+        <result property="alarmLimit" column="alarm_limit"/>
+        <result property="alarmType" column="alarm_type"/>
+    </resultMap>
+
+    <select id="getRecAlarmDataList" resultMap="RecAlarmDataMap">
+        SELECT *
+        from rec_alarm_data;
+    </select>
+
+    <select id="getRecAlarmDataListByRange" resultMap="RecAlarmDataMap">
+        SELECT * from rec_alarm_data
+        where rec_time BETWEEN #{startDate} and #{endDate}
+        order by rec_time;
+    </select>
+
+    <select id="getLastRecAlarmData" resultMap="RecAlarmDataMap">
+        SELECT *
+        from rec_alarm_data where factor_id = #{0} order by id desc limit 1;
+    </select>
+
+    <insert id="addRecAlarmData" useGeneratedKeys="true">
+        INSERT INTO rec_alarm_data
+        (rec_time, factor_id, alarm_value, alarm_limit, alarm_type)
+        VALUES
+        (#{recTime}, #{factorID}, #{alarmValue}, #{alarmLimit}, #{alarmType});
+    </insert>
+
+    <select id="getRecInfoDoorList" resultType="com.grean.station.domain.DO.rec.RecInfoDoor">
+        SELECT *
+        from rec_info_door;
+    </select>
+
+    <select id="getLastRecInfoDoor" resultType="com.grean.station.domain.DO.rec.RecInfoDoor">
+        SELECT *
+        from rec_info_door order by id desc limit 1;
+    </select>
+
+    <insert id="addRecInfoDoor" useGeneratedKeys="true">
+        INSERT INTO rec_info_door
+        (rec_time, rec_name, rec_type, rec_info)
+        VALUES
+        (#{rec_time}, #{rec_name}, #{rec_type}, #{rec_info});
+    </insert>
+
+    <select id="getRecInfoGasList" resultType="com.grean.station.domain.DO.rec.RecInfo">
+        SELECT *
+        from rec_info_gas;
+    </select>
+
+    <select id="getLastRecInfoGas" resultType="com.grean.station.domain.DO.rec.RecInfo">
+        SELECT *
+        from rec_info_gas order by id desc limit 1;
+    </select>
+
+    <insert id="addRecInfoGas" useGeneratedKeys="true">
+        INSERT INTO rec_info_gas
+        (rec_time, rec_info)
+        VALUES
+        (#{rec_time}, #{rec_info});
+    </insert>
+
+    <select id="getRecInfoWaterList" resultType="com.grean.station.domain.DO.rec.RecInfo">
+        SELECT *
+        from rec_info_water;
+    </select>
+
+    <select id="getLastRecInfoWater" resultType="com.grean.station.domain.DO.rec.RecInfo">
+        SELECT *
+        from rec_info_water order by id desc limit 1;
+    </select>
+
+    <insert id="addRecInfoWater" useGeneratedKeys="true">
+        INSERT INTO rec_info_water
+        (rec_time, rec_info)
+        VALUES
+        (#{rec_time}, #{rec_info});
+    </insert>
+
+    <select id="getRecSample" resultType="com.grean.station.domain.DO.rec.RecSample">
+        select * from rec_sample;
+    </select>
+
+    <update id="updateRecSample">
+        UPDATE  rec_sample SET rec_time = #{rec_time},
+        volume = #{volume}, unit = #{unit} where id = #{id};
+    </update>
+
+
+
+    <delete id="keepTableSize">
+        DELETE FROM ${tableName} WHERE id NOT IN (SELECT t.id FROM (SELECT * FROM ${tableName} ORDER BY id DESC LIMIT ${recSize}) as t);
+    </delete>
+
+
+    <select id="getRecNullSendTimeList" resultMap="RecDataTimeMap">
+        SELECT * from ${tableName}
+        where ${sendTime} is NULL
+        order by id desc limit ${recSize};
+    </select>
+</mapper>

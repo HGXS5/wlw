@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.grean.station.dao.PLCMapper">
+
+    <resultMap type="com.grean.station.domain.DO.plc.DefWord" id="DefWordMap">
+        <result property="id" column="id"/>
+        <result property="name" column="defname"/>
+        <result property="pname" column="defpname"/>
+        <result property="type" column="deftype"/>
+        <result property="address" column="address"/>
+        <result property="defvalue" column="defvalue"/>
+        <result property="curvalue" column="curvalue"/>
+        <result property="isvalve" column="isvalve"/>
+    </resultMap>
+
+    <select id="getPLCDefWordList" resultMap="DefWordMap">
+        SELECT *
+        from plc_def_word;
+    </select>
+
+    <resultMap type="com.grean.station.domain.DO.plc.KeyWord" id="KeyWordMap">
+        <result property="id" column="id"/>
+        <result property="cnName" column="cnname"/>
+        <result property="enName" column="enname"/>
+    </resultMap>
+
+    <select id="getPLCKeyWordList" resultMap="KeyWordMap">
+        SELECT *
+        from plc_key_word;
+    </select>
+
+    <resultMap type="com.grean.station.domain.DO.plc.VarWord" id="VarWordMap">
+        <result property="id" column="id"/>
+        <result property="cnName" column="cnname"/>
+        <result property="enName" column="enname"/>
+        <result property="type" column="vartype"/>
+        <result property="defValue" column="defvalue"/>
+        <result property="curValue" column="curvalue"/>
+    </resultMap>
+
+    <select id="getPLCVarWordList" resultMap="VarWordMap">
+        SELECT *
+        from plc_var_word;
+    </select>
+
+    <select id="getPLCStatusWordList" resultType="com.grean.station.domain.DO.plc.StatusWord">
+        SELECT *
+        from plc_status_word;
+    </select>
+
+    <update id="updatePLCVarWord">
+        UPDATE plc_var_word
+        SET cnname = #{cnName}, enname = #{enName}, vartype = #{type}, defvalue = #{defValue}, curvalue = #{curValue}
+        where id=#{id};
+    </update>
+
+    <update id="truncatePLCDefWord">
+        truncate table plc_def_word;
+    </update>
+
+    <insert id="addPLCDefWord" useGeneratedKeys="true">
+        INSERT INTO plc_def_word
+        (id, defname, defpname, deftype, address, defvalue, curvalue, isvalve)
+        VALUES
+        (#{id}, #{name}, #{pname}, #{type}, #{address}, #{defvalue}, #{curvalue}, #{isvalve});
+    </insert>
+
+</mapper>

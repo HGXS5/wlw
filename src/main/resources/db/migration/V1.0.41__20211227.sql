@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('107', '协议', 'DevPlatform', '平台接口协议');

@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('95', '协议', 'SampleXqls9330', '小桥流水9330留样器');

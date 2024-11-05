@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('97', '协议', 'SampleSB6000', '科盛SB6000采样器');

@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('130', '协议', 'DevUVSwift', '斯威高科辐射表协议');

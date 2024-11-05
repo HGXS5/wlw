@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('127', '协议', 'SampleGrasp9320', '采样器格雷斯普9320');

@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.grean.station.dao.CfgMapper">
+
+    <resultMap type="com.grean.station.domain.DO.cfg.CfgSerial" id="CfgSerialMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="port" column="port"/>
+        <result property="baudRate" column="baudrate"/>
+        <result property="dataBits" column="databits"/>
+        <result property="stopBits" column="stopbits"/>
+        <result property="parity" column="parity"/>
+        <result property="flowControl" column="flowcontrol"/>
+        <result property="used" column="used"/>
+        <result property="cmdType" column="cmd_type"/>
+        <result property="cmdDelay" column="cmd_delay"/>
+    </resultMap>
+
+    <select id="getCfgSerialList" resultMap="CfgSerialMap">
+        SELECT *
+        from cfg_serial;
+    </select>
+
+    <update id="updateCfgSerial">
+        UPDATE cfg_serial
+        SET baudrate = #{baudRate}, databits = #{dataBits}, stopbits = #{stopBits}, parity = #{parity}, used = #{used},
+        cmd_type = #{cmdType}, cmd_delay = #{cmdDelay}
+        where id=#{id};
+    </update>
+
+    <select id="getCfgUnitList" resultType="com.grean.station.domain.DO.cfg.CfgUnit">
+        SELECT *
+        from cfg_unit;
+    </select>
+
+    <select id="getCfgDevList" resultType="com.grean.station.domain.DO.cfg.CfgDev">
+        SELECT *
+        from cfg_dev;
+    </select>
+
+    <update id="truncateCfgDev">
+        truncate table cfg_dev;
+    </update>
+
+    <insert id="addCfgDev" useGeneratedKeys="true">
+        INSERT INTO cfg_dev
+        (name, nick, type, protocol, address, serial_id, net_id, related_id, related_id2, log_id,
+        save_mea_tag, save_zero_tag, save_span_tag, save_std_tag, save_blnk_tag, save_rcvr_tag, save_parl_tag,
+        start_mea_tag, start_zero_tag, start_span_tag, start_std_tag, start_blnk_tag, start_rcvr_tag, start_parl_tag)
+        VALUES
+        (#{name}, #{nick}, #{type}, #{protocol}, #{address}, #{serial_id}, #{net_id}, #{related_id}, #{related_id2}, #{log_id},
+        #{save_mea_tag}, #{save_zero_tag}, #{save_span_tag}, #{save_std_tag}, #{save_blnk_tag}, #{save_rcvr_tag}, #{save_parl_tag},
+        #{start_mea_tag}, #{start_zero_tag}, #{start_span_tag}, #{start_std_tag}, #{start_blnk_tag}, #{start_rcvr_tag}, #{start_parl_tag});
+    </insert>
+
+    <update id="updateCfgDev">
+        UPDATE  cfg_dev SET name = #{name}, nick = #{nick}, type = #{type}, protocol = #{protocol}, address = #{address},
+        serial_id = #{serial_id}, net_id = #{net_id}, related_id = #{related_id}, related_id2 = #{related_id2}, log_id = #{log_id},
+        save_mea_tag = #{save_mea_tag}, save_zero_tag = #{save_zero_tag}, save_span_tag = #{save_span_tag}, save_std_tag = #{save_std_tag},
+        save_blnk_tag = #{save_blnk_tag}, save_rcvr_tag = #{save_rcvr_tag}, save_parl_tag = #{save_parl_tag},
+        start_mea_tag = #{start_mea_tag}, start_zero_tag = #{start_zero_tag}, start_span_tag = #{start_span_tag}, start_std_tag = #{start_std_tag},
+        start_blnk_tag = #{start_blnk_tag}, start_rcvr_tag = #{start_rcvr_tag}, start_parl_tag = #{start_parl_tag}
+        where id=#{id};
+    </update>
+
+    <update id="deleteCfgDev">
+        DELETE FROM cfg_dev WHERE id=#{id};
+    </update>
+
+    <resultMap type="com.grean.station.domain.DO.cfg.CfgDevQuery" id="CfgDevQueryMap">
+        <result property="id" column="id"/>
+        <result property="devid" column="devid"/>
+        <result property="factorid" column="factorid"/>
+        <result property="protoType" column="prototype"/>
+        <result property="queryType" column="querytype"/>
+        <result property="queryCmd" column="querycmd"/>
+        <result property="dataType" column="datatype"/>
+        <result property="dataFormat" column="dataformat"/>
+        <result property="dataIndex" column="dataindex"/>
+        <result property="dataLength" column="datalength"/>
+        <result property="updateA" column="update_a"/>
+        <result property="updateB" column="update_b"/>
+    </resultMap>
+
+    <select id="getCfgDevQueryList" resultMap="CfgDevQueryMap">
+        SELECT *
+        from cfg_dev_query;
+    </select>
+
+    <select id="getDevQueryList" resultMap="CfgDevQueryMap">
+        SELECT *
+        from cfg_dev_query where devid = #{id} and prototype = #{protocol};
+    </select>
+
+    <insert id="addCfgDevQuery" useGeneratedKeys="true">
+        INSERT INTO cfg_dev_query
+        (devid, factorid, prototype, querytype, querycmd, datatype, dataformat, dataindex, datalength, update_a, update_b)
+        VALUES
+        (#{devid}, #{factorid}, #{protoType}, #{queryType}, #{queryCmd}, #{dataType}, #{dataFormat}, #{dataIndex}, #{dataLength}, #{updateA}, #{updateB});
+    </insert>
+
+    <update id="updateCfgDevQuery">
+        UPDATE  cfg_dev_query SET devid = #{devid}, factorid = #{factorid}, prototype = #{protoType}, querytype = #{queryType}, querycmd = #{queryCmd},
+        datatype = #{dataType}, dataformat = #{dataFormat}, dataindex = #{dataIndex}, update_a = #{updateA}, update_b = #{updateB} where id=#{id};
+    </update>
+
+    <update id="deleteCfgDevQuery">
+        DELETE FROM cfg_dev_query WHERE devid=#{0} and factorid=#{1};
+    </update>
+
+    <resultMap type="com.grean.station.domain.DO.cfg.CfgDevCmd" id="CfgDevCmdMap">
+        <result property="id" column="id"/>
+        <result property="devid" column="devid"/>
+        <result property="factorid" column="factorid"/>
+        <result property="cmdType" column="cmdtype"/>
+        <result property="cmdIndex" column="cmdindex"/>
+        <result property="cmdString" column="cmdstring"/>
+        <result property="protoType" column="prototype"/>
+        <result property="cmdDelay" column="cmddelay"/>
+    </resultMap>
+
+    <select id="getCfgDevCmdList" resultMap="CfgDevCmdMap">
+        SELECT *
+        from cfg_dev_cmd order by cmdindex;
+    </select>
+
+    <insert id="addCfgDevCmd" useGeneratedKeys="true">
+        INSERT INTO cfg_dev_cmd
+        (devid, factorid, prototype, cmdtype, cmdindex, cmdstring, cmddelay)
+        VALUES
+        (#{devid}, #{factorid}, #{protoType}, #{cmdType}, #{cmdIndex}, #{cmdString}, #{cmdDelay});
+    </insert>
+
+    <update id="deleteCfgDevCmd">
+        DELETE FROM cfg_dev_cmd WHERE devid=#{0} and cmdtype=#{1};
+    </update>
+
+    <select id="getCfgDevParamList" resultType="com.grean.station.domain.DO.cfg.CfgDevParam">
+        SELECT *
+        from cfg_dev_param order by id;
+    </select>
+
+    <insert id="addCfgDevParam" useGeneratedKeys="true">
+        INSERT INTO cfg_dev_param
+        (dev_id, param_name, range_min, range_max, param_min, param_max)
+        VALUES
+        (#{dev_id}, #{param_name}, #{range_min}, #{range_max}, #{param_min}, #{param_max});
+    </insert>
+
+    <update id="deleteCfgDevParam">
+        DELETE FROM cfg_dev_param WHERE dev_id=#{dev_id} and param_name=#{param_name} and range_min=#{range_min} and range_max=#{range_max};
+    </update>
+
+    <update id="truncateCfgDevParam">
+        truncate table cfg_dev_param;
+    </update>
+
+    <select id="getCfgDevLogList" resultType="com.grean.station.domain.DO.cfg.CfgDevLog">
+        SELECT *
+        from cfg_dev_log order by dev_id desc;
+    </select>
+
+    <select id="getCfgDevAlarmList" resultType="com.grean.station.domain.DO.cfg.CfgDevAlarm">
+        SELECT *
+        from cfg_dev_alarm;
+    </select>
+
+    <select id="getCfgDevFaultList" resultType="com.grean.station.domain.DO.cfg.CfgDevFault">
+        SELECT *
+        from cfg_dev_fault;
+    </select>
+
+    <select id="getCfgLogGroupList" resultType="com.grean.station.domain.DO.cfg.CfgLogGroup">
+        SELECT *
+        from cfg_log_group order by dev_id desc;
+    </select>
+
+    <select id="getCfgRegModbusList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_modbus;
+    </select>
+
+    <select id="getCfgRegFiveList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_five;
+    </select>
+
+    <select id="getCfgRegQualityList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_quality;
+    </select>
+
+    <select id="getCfgRegQualityList3" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_quality3;
+    </select>
+
+    <select id="getCfgRegQualityList4" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_quality4;
+    </select>
+
+    <select id="getCfgRegFlowList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_flow;
+    </select>
+
+    <select id="getCfgRegYiwenList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_yiwen;
+    </select>
+
+    <select id="getCfgRegYuxingList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT *
+        from cfg_reg_yuxing;
+    </select>
+
+    <select id="getCfgScheduleDayList" resultType="com.grean.station.domain.DO.cfg.CfgScheduleDay">
+        SELECT *
+        from cfg_schedule_day;
+    </select>
+
+    <update id="updateCfgScheduleDay">
+        UPDATE cfg_schedule_day SET task_name = #{task_name}, task_code = #{task_code}, factor_list = #{factor_list}, factor_list2 = #{factor_list2} where id = #{id};
+    </update>
+
+    <select id="getCfgScheduleWeekList" resultType="com.grean.station.domain.DO.cfg.CfgScheduleWeek">
+        SELECT *
+        from cfg_schedule_week;
+    </select>
+
+    <select id="getCfgScheduleMonthList" resultType="com.grean.station.domain.DO.cfg.CfgScheduleMonth">
+        SELECT *
+        from cfg_schedule_month;
+    </select>
+
+    <update id="truncateCfgScheduleMonth">
+        truncate table cfg_schedule_month;
+    </update>
+
+    <insert id="insertCfgScheduleMonth" useGeneratedKeys="true">
+        INSERT INTO cfg_schedule_month
+        (day, hour, min, task_name, task_code)
+        VALUES
+        (#{day}, #{hour}, #{min}, #{task_name}, #{task_code});
+    </insert>
+
+    <select id="getCfgScheduleSampleList" resultType="com.grean.station.domain.DO.cfg.CfgScheduleSample">
+        SELECT *
+        from cfg_schedule_sample;
+    </select>
+
+    <update id="updateCfgScheduleSample">
+        UPDATE cfg_schedule_sample SET run = #{run} where id = #{id};
+    </update>
+
+    <select id="getCfgScheduleQualityList" resultType="com.grean.station.domain.DO.cfg.CfgScheduleQuality">
+        SELECT *
+        from cfg_schedule_quality;
+    </select>
+
+    <update id="updateCfgScheduleQuality">
+        UPDATE cfg_schedule_quality SET run = #{run}, hour = #{hour}, min = #{min}, sec = #{sec} where name = #{name};
+    </update>
+
+    <select id="getCfgScriptList" resultType="com.grean.station.domain.DO.cfg.CfgScript">
+        SELECT *
+        from cfg_script;
+    </select>
+
+    <select id="getCfgDevRegList" resultType="com.grean.station.domain.DO.cfg.CfgDevReg">
+        SELECT * from ${regTableName};
+    </select>
+
+    <select id="getCfgFactorCodeList" resultType="com.grean.station.domain.DO.cfg.CfgFactorCode">
+        SELECT * from ${codeTableName};
+    </select>
+
+    <resultMap type="com.grean.station.domain.DO.cfg.CfgFactor" id="CfgFactorMap">
+        <result property="id" column="id"/>
+        <result property="devID" column="dev_id"/>
+        <result property="devChannel" column="dev_channel"/>
+        <result property="devAddress" column="dev_address"/>
+        <result property="name" column="name"/>
+        <result property="type" column="type"/>
+        <result property="unit" column="unit"/>
+        <result property="decimals" column="decimals"/>
+        <result property="range" column="range"/>
+        <result property="alarmMax" column="alarm_max"/>
+        <result property="alarmMin" column="alarm_min"/>
+        <result property="used" column="used"/>
+        <result property="code" column="code"/>
+        <result property="codeGJ" column="code_gj"/>
+        <result property="codeZJ" column="code_zj"/>
+        <result property="codeSL" column="code_sl"/>
+        <result property="level1" column="level_1"/>
+        <result property="level2" column="level_2"/>
+        <result property="level3" column="level_3"/>
+        <result property="level4" column="level_4"/>
+        <result property="level5" column="level_5"/>
+        <result property="nonNegative" column="non_negative"/>
+
+        <result property="spanVal" column="span_val"/>
+        <result property="zeroStdVal" column="zero_std_val"/>
+        <result property="spanStdVal" column="span_std_val"/>
+        <result property="stdStdVal" column="std_std_val"/>
+        <result property="blnkStdVal" column="blnk_std_val"/>
+
+        <result property="rcvrMotherVal" column="rcvr_mother_val"/>
+        <result property="rcvrMotherVol" column="rcvr_mother_vol"/>
+        <result property="rcvrDestVal" column="rcvr_dest_val"/>
+        <result property="rcvrCupVol" column="rcvr_cup_vol"/>
+        <result property="rcvrRateMin" column="rcvr_rate_min"/>
+        <result property="rcvrRateMax" column="rcvr_rate_max"/>
+        <result property="rcvrMultiple" column="rcvr_multiple"/>
+        <result property="rcvrType" column="rcvr_type"/>
+        <result property="rcvrLimit" column="rcvr_limit"/>
+
+        <result property="zeroErrorMin" column="zero_error_min"/>
+        <result property="zeroErrorMax" column="zero_error_max"/>
+        <result property="zeroDriftMin" column="zero_drift_min"/>
+        <result property="zeroDriftMax" column="zero_drift_max"/>
+
+        <result property="spanErrorMin" column="span_error_min"/>
+        <result property="spanErrorMax" column="span_error_max"/>
+        <result property="spanDriftMin" column="span_drift_min"/>
+        <result property="spanDriftMax" column="span_drift_max"/>
+
+        <result property="stdErrorMin" column="std_error_min"/>
+        <result property="stdErrorMax" column="std_error_max"/>
+        <result property="stdDriftMin" column="std_drift_min"/>
+        <result property="stdDriftMax" column="std_drift_max"/>
+
+        <result property="blnkErrorMin" column="blnk_error_min"/>
+        <result property="blnkErrorMax" column="blnk_error_max"/>
+        <result property="blnkDriftMin" column="blnk_drift_min"/>
+        <result property="blnkDriftMax" column="blnk_drift_max"/>
+
+        <result property="parDriftMin" column="par_drift_min"/>
+        <result property="parDriftMax" column="par_drift_max"/>
+
+        <result property="checkType" column="check_type"/>
+        <result property="unitParam" column="unit_param"/>
+
+    </resultMap>
+
+    <select id="getAllCfgFactorList" resultMap="CfgFactorMap">
+        SELECT *
+        from cfg_factor_list;
+    </select>
+
+    <update id="updateAllCfgFactor">
+        UPDATE cfg_factor_list
+        SET unit = #{unit}, decimals = #{decimals}, alarm_max = #{alarmMax}, alarm_min = #{alarmMin}, dev_id = #{devID}, check_type = #{checkType}, non_negative = #{nonNegative}
+        where id=#{id};
+    </update>
+
+    <update id="updateAllCfgFactorStdVal">
+        UPDATE cfg_factor_list
+        SET span_val = #{spanVal}, zero_std_val = #{zeroStdVal}, span_std_val = #{spanStdVal}, std_std_val = #{stdStdVal}, blnk_std_val = #{blnkStdVal}
+        where id=#{id};
+    </update>
+
+    <update id="updateAllCfgFactorRcvrVal">
+        UPDATE cfg_factor_list
+        SET rcvr_mother_val = #{rcvrMotherVal}, rcvr_mother_vol = #{rcvrMotherVol}, rcvr_dest_val = #{rcvrDestVal}, rcvr_cup_vol = #{rcvrCupVol},
+        rcvr_rate_min = #{rcvrRateMin}, rcvr_rate_max = #{rcvrRateMax}, rcvr_multiple = #{rcvrMultiple}, rcvr_type = #{rcvrType}, rcvr_limit = #{rcvrLimit}
+        where id=#{id};
+    </update>
+
+    <update id="updateAllCfgFactorSpanVal">
+        UPDATE cfg_factor_list
+        SET span_val = #{spanVal}
+        where id=#{id};
+    </update>
+
+    <update id="updateAllCfgFactorErrorVal">
+        UPDATE cfg_factor_list
+        SET zero_error_min = #{zeroErrorMin}, zero_error_max = #{zeroErrorMax}, span_error_min = #{spanErrorMin}, span_error_max = #{spanErrorMax},
+        std_error_min = #{stdErrorMin}, std_error_max = #{stdErrorMax}, blnk_error_min = #{blnkErrorMin}, blnk_error_max = #{blnkErrorMax}
+        where id=#{id};
+    </update>
+
+    <update id="updateAllCfgFactorDriftVal">
+        UPDATE cfg_factor_list
+        SET zero_drift_min = #{zeroDriftMin}, zero_drift_max = #{zeroDriftMax}, span_drift_min = #{spanDriftMin}, span_drift_max = #{spanDriftMax},
+        std_drift_min = #{stdDriftMin}, std_drift_max = #{stdDriftMax}, blnk_drift_min = #{blnkDriftMin}, blnk_drift_max = #{blnkDriftMax},
+        par_drift_min = #{parDriftMin}, par_drift_max = #{parDriftMax}
+        where id=#{id};
+    </update>
+
+    <select id="getCfgFactorList" resultMap="CfgFactorMap">
+        SELECT *
+        from cfg_factor order by id_show;
+    </select>
+
+    <update id="truncateCfgFactor">
+        truncate table cfg_factor;
+    </update>
+
+    <insert id="addCfgFactor" useGeneratedKeys="true">
+        INSERT INTO cfg_factor
+        (name, type, unit, decimals, alarm_max, alarm_min, code, code_gj, code_zj, code_sl, dev_id, dev_address, span_val, zero_std_val, span_std_val, std_std_val, blnk_std_val,
+        rcvr_mother_val, rcvr_mother_vol, rcvr_dest_val, rcvr_cup_vol, rcvr_rate_min, rcvr_rate_max, rcvr_multiple, rcvr_type, rcvr_limit, zero_error_min, zero_error_max, span_error_min, span_error_max,
+        std_error_min, std_error_max, blnk_error_min, blnk_error_max, zero_drift_min, zero_drift_max, span_drift_min, span_drift_max, std_drift_min,
+        std_drift_max, blnk_drift_min, blnk_drift_max, par_drift_min, par_drift_max, level_1, level_2, level_3, level_4, level_5, check_type, non_negative)
+        VALUES
+        (#{name}, #{type}, #{unit}, #{decimals}, #{alarmMax}, #{alarmMin}, #{code}, #{codeGJ}, #{codeZJ}, #{codeSL}, #{devID}, #{devAddress}, #{spanVal}, #{zeroStdVal}, #{spanStdVal},
+        #{stdStdVal}, #{blnkStdVal}, #{rcvrMotherVal}, #{rcvrMotherVol}, #{rcvrDestVal}, #{rcvrCupVol}, #{rcvrRateMin}, #{rcvrRateMax}, #{rcvrMultiple}, #{rcvrType}, #{rcvrLimit}, #{zeroErrorMin}, #{zeroErrorMax},
+        #{spanErrorMin}, #{spanErrorMax}, #{stdErrorMin}, #{stdErrorMax}, #{blnkErrorMin}, #{blnkErrorMax}, #{zeroDriftMin}, #{zeroDriftMax}, #{spanDriftMin},
+        #{spanDriftMax}, #{stdDriftMin}, #{stdDriftMax}, #{blnkDriftMin}, #{blnkDriftMax}, #{parDriftMin}, #{parDriftMax}, #{level1}, #{level2}, #{level3}, #{level4}, #{level5}, #{checkType}, #{nonNegative});
+    </insert>
+
+
+    <update id="updateCfgFactor">
+        UPDATE cfg_factor
+        SET unit = #{unit}, decimals = #{decimals}, alarm_max = #{alarmMax}, alarm_min = #{alarmMin}, dev_id = #{devID}, dev_address = #{devAddress},
+        dev_channel = #{devChannel}, level_1 = #{level1}, level_2 = #{level2}, level_3 = #{level3}, level_4 = #{level4}, level_5 = #{level5}, check_type = #{checkType}, non_negative = #{nonNegative}
+        where id=#{id};
+    </update>
+
+    <update id="deleteCfgFactor">
+        DELETE FROM cfg_factor WHERE name=#{name};
+    </update>
+
+    <update id="updateCfgFactorStdVal">
+        UPDATE cfg_factor
+        SET span_val = #{spanVal}, zero_std_val = #{zeroStdVal}, span_std_val = #{spanStdVal}, std_std_val = #{stdStdVal}, blnk_std_val = #{blnkStdVal}
+        where id=#{id};
+    </update>
+
+    <update id="updateCfgFactorRcvrVal">
+        UPDATE cfg_factor
+        SET rcvr_mother_val = #{rcvrMotherVal}, rcvr_mother_vol = #{rcvrMotherVol}, rcvr_dest_val = #{rcvrDestVal}, rcvr_cup_vol = #{rcvrCupVol},
+        rcvr_rate_min = #{rcvrRateMin}, rcvr_rate_max = #{rcvrRateMax}, rcvr_multiple = #{rcvrMultiple}, rcvr_type = #{rcvrType}, rcvr_limit = #{rcvrLimit}
+        where id=#{id};
+    </update>
+
+    <update id="updateCfgFactorSpanVal">
+        UPDATE cfg_factor
+        SET span_val = #{spanVal}
+        where id=#{id};
+    </update>
+
+    <update id="updateCfgFactorErrorVal">
+        UPDATE cfg_factor
+        SET zero_error_min = #{zeroErrorMin}, zero_error_max = #{zeroErrorMax}, span_error_min = #{spanErrorMin}, span_error_max = #{spanErrorMax},
+        std_error_min = #{stdErrorMin}, std_error_max = #{stdErrorMax}, blnk_error_min = #{blnkErrorMin}, blnk_error_max = #{blnkErrorMax}
+        where id=#{id};
+    </update>
+
+    <update id="updateCfgFactorDriftVal">
+        UPDATE cfg_factor
+        SET zero_drift_min = #{zeroDriftMin}, zero_drift_max = #{zeroDriftMax}, span_drift_min = #{spanDriftMin}, span_drift_max = #{spanDriftMax},
+        std_drift_min = #{stdDriftMin}, std_drift_max = #{stdDriftMax}, blnk_drift_min = #{blnkDriftMin}, blnk_drift_max = #{blnkDriftMax},
+        par_drift_min = #{parDriftMin}, par_drift_max = #{parDriftMax}
+        where id=#{id};
+    </update>
+
+    <resultMap type="com.grean.station.domain.DO.cfg.CfgNetClient" id="CfgNetClientMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="ip" column="ip"/>
+        <result property="port" column="port"/>
+        <result property="used" column="used"/>
+        <result property="cmdType" column="cmd_type"/>
+        <result property="cmdDelay" column="cmd_delay"/>
+    </resultMap>
+
+    <select id="getCfgNetClientList" resultMap="CfgNetClientMap">
+        SELECT *
+        from cfg_net_client;
+    </select>
+
+    <update id="updateCfgNetClient">
+        UPDATE cfg_net_client
+        SET ip = #{ip}, port = #{port}, used = #{used}, cmd_type = #{cmdType}, cmd_delay = #{cmdDelay}
+        where id=#{id};
+    </update>
+
+    <select id="getCfgUploadNetList" resultType="com.grean.station.domain.DO.cfg.CfgUploadNet">
+        SELECT *
+        from cfg_upload_net;
+    </select>
+
+    <update id="updateCfgUploadNet">
+        UPDATE cfg_upload_net
+        SET name = #{name}, ip = #{ip}, port = #{port}, protocol = #{protocol}, mn = #{mn}, password = #{password},
+        used = #{used}, period_heart = #{period_heart}, period_real = #{period_real}, period_sys_state = #{period_sys_state},
+        period_dev_state = #{period_dev_state}, period_sys_log = #{period_sys_log}, period_dev_log = #{period_dev_log},
+        over_time = #{over_time}, re_count = #{re_count}
+        where id=#{id};
+    </update>
+
+    <select id="getCfgUploadComList" resultType="com.grean.station.domain.DO.cfg.CfgUploadCom">
+        SELECT *
+        from cfg_upload_com;
+    </select>
+
+    <update id="updateCfgUploadCom">
+        UPDATE cfg_upload_com
+        SET name = #{name}, port = #{port}, protocol = #{protocol}, mn = #{mn}, password = #{password},
+        used = #{used}, period_heart = #{period_heart}, period_real = #{period_real}, period_sys_state = #{period_sys_state},
+        period_dev_state = #{period_dev_state}, period_sys_log = #{period_sys_log}, period_dev_log = #{period_dev_log},
+        over_time = #{over_time}, re_count = #{re_count}
+        where id=#{id};
+    </update>
+
+    <resultMap type="com.grean.station.domain.DO.cfg.CfgUser" id="CfgUserMap">
+        <result property="id" column="id"/>
+        <result property="user" column="user"/>
+        <result property="nick" column="nick"/>
+        <result property="password" column="password"/>
+        <result property="group_name" column="group_name"/>
+        <result property="description" column="description"/>
+        <result property="add_time" column="add_time"/>
+        <result property="update_time" column="update_time"/>
+        <result property="login_time" column="login_time"/>
+        <result property="access" column="access"/>
+        <result property="access_time" column="access_time"/>
+    </resultMap>
+
+    <select id="getCfgUserList" resultMap="CfgUserMap">
+        select * from cfg_user;
+    </select>
+
+    <select id="getCfgUserByName" resultMap="CfgUserMap">
+        select * from cfg_user where user = #{user};
+    </select>
+
+    <insert id="addCfgUser" useGeneratedKeys="true">
+        INSERT INTO cfg_user
+        (user, nick, password, group_name, description, add_time, update_time, login_time, access, access_time)
+        VALUES
+        (#{user}, #{nick}, #{password}, #{group_name}, #{description}, #{add_time}, #{update_time}, #{login_time}, #{access}, #{access_time});
+    </insert>
+
+    <update id="updateCfgUser">
+        UPDATE  cfg_user SET user = #{user}, nick = #{nick}, password = #{password}, group_name = #{group_name},
+        description = #{description}, add_time = #{add_time}, update_time = #{update_time}, login_time = #{login_time},
+        access = #{access}, access_time = #{access_time} where id=#{id};
+    </update>
+
+    <update id="updateCfgUserPassword">
+        UPDATE  cfg_user SET password = #{password}, update_time = now() where id=#{id};
+    </update>
+
+    <update id="updateCfgAccessPassword">
+        UPDATE  cfg_user SET access = #{access} where id=#{id};
+    </update>
+
+    <update id="updateCfgUserLoginTime">
+        UPDATE  cfg_user SET login_time = now() where id=#{id};
+    </update>
+
+    <update id="updateCfgAccessLoginTime">
+        UPDATE  cfg_user SET access_time = #{access_time} where id=#{id};
+    </update>
+
+    <update id="truncateCfgUser">
+        truncate table cfg_user;
+    </update>
+
+    <update id="deleteCfgUser">
+        DELETE FROM cfg_user WHERE id=#{id};
+    </update>
+
+    <select id="getCfgStation" resultType="com.grean.station.domain.DO.cfg.CfgStation">
+        select * from cfg_station where id = 1;
+    </select>
+
+    <update id="updateCfgStation">
+        UPDATE  cfg_station SET station_name = #{station_name}, station_code = #{station_code},
+        station_address = #{station_address}, build_date = #{build_date}, longitude = #{longitude},
+        latitude = #{latitude}, station_owner = #{station_owner}, station_builder = #{station_builder},
+        station_operator = #{station_operator}, teamviewer_id = #{teamviewer_id},
+        emergency_contact = #{emergency_contact}, emergency_phone = #{emergency_phone},
+        run_date = #{run_date} where id = #{id};
+    </update>
+
+    <select id="getCfgSample" resultType="com.grean.station.domain.DO.cfg.CfgSample">
+        select * from cfg_sample where id = 1;
+    </select>
+
+    <update id="updateCfgSample">
+        UPDATE  cfg_sample SET mode = #{mode}, bottles = #{bottles},
+        volume = #{volume}, bottle_id = #{bottle_id} where id = #{id};
+    </update>
+
+    <select id="getCfgNameList" resultType="com.grean.station.domain.DO.cfg.CfgName">
+        select * from cfg_name;
+    </select>
+
+    <select id="getCfgCamera" resultType="com.grean.station.domain.DO.cfg.CfgCamera">
+        select * from cfg_camera where id = 1;
+    </select>
+
+    <update id="updateCfgCamera">
+        UPDATE  cfg_camera SET ip = #{ip}, port = #{port} where id = #{id};
+    </update>
+
+    <select id="getCfgScheduleFiveList" resultType="com.grean.station.domain.DO.cfg.CfgScheduleSample">
+        SELECT *
+        from cfg_schedule_five;
+    </select>
+
+    <update id="updateCfgScheduleFive">
+        UPDATE cfg_schedule_five SET run = #{run} where id = #{id};
+    </update>
+
+    <select id="getCfgFive" resultType="com.grean.station.domain.DO.cfg.CfgFive">
+        select * from cfg_five where id = 1;
+    </select>
+
+    <update id="updateCfgFive">
+        UPDATE  cfg_five SET is_schedule = #{is_schedule}, is_week = #{is_week}, week_day = #{week_day}, start_date = #{start_date},
+        end_date = #{end_date}, is_urgent = #{is_urgent},  urgent_circle = #{urgent_circle} where id = #{id};
+    </update>
+
+    <select id="getCfgFlow" resultType="com.grean.station.domain.DO.cfg.CfgFlow">
+        select * from cfg_flow where id = 1;
+    </select>
+
+    <update id="updateCfgFlow">
+        UPDATE  cfg_flow SET record = #{record},  record_circle = #{record_circle}, upload = #{upload} where id = 1;
+    </update>
+
+    <select id="getCfgComm206List" resultType="com.grean.station.domain.DO.cfg.CfgComm206">
+        SELECT *
+        from cfg_comm_206;
+    </select>
+
+    <select id="getCfgModbusList" resultType="com.grean.station.domain.DO.cfg.CfgModbus">
+        SELECT *
+        from cfg_modbus;
+    </select>
+
+    <select id="getCfgModbusValList" resultType="com.grean.station.domain.DO.cfg.CfgModbusVal">
+        SELECT *
+        from cfg_modbus_plc;
+    </select>
+
+</mapper>

@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('93', '协议', 'CentrifugeAcs', '微智兆ACS离心机协议');

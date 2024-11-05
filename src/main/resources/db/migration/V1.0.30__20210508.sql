@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('92', '协议', 'EnvPowerT645', 'DLT645协议');

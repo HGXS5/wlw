@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('108', '协议', 'EnvPowerWeiqi', '炜麒ups协议');

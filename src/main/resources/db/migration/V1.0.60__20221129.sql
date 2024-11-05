@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('125', '协议', 'tox.DevToxMicroLan', 'MicroLan毒性仪协议');

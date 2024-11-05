@@ -1,0 +1,1 @@
+INSERT INTO `cfg_name` VALUES ('122', '协议', 'DevFlowHz', '航征雷达流量计协议');

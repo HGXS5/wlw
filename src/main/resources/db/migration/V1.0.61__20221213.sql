@@ -1,0 +1,2 @@
+ALTER TABLE cfg_factor ADD COLUMN id_show INT DEFAULT 1;
+ALTER TABLE cfg_factor_list ADD COLUMN id_show INT DEFAULT 1;

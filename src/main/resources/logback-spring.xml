@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+    <property name="LOG_HOME" value="./log/" />
+    <property name="LOG_HOME_Prod" value="./log" />
+
+    <springProfile name="dev">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <!-- encoder的默认实现类是ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+            <encoder>
+                <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="infoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_HOME}/station/station-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+                <!-- each file should be at most 50MB, keep 60 days worth of history, but at most 20GB -->
+                <maxFileSize>50MB</maxFileSize>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>20GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <appender name="serialAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_HOME}/serial/serial-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+                <!-- each file should be at most 50MB, keep 60 days worth of history, but at most 20GB -->
+                <maxFileSize>50MB</maxFileSize>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>20GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <appender name="netAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_HOME}/net/net-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+                <!-- each file should be at most 50MB, keep 60 days worth of history, but at most 20GB -->
+                <maxFileSize>50MB</maxFileSize>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>20GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <appender name="scriptAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_HOME}/script/script-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+                <!-- each file should be at most 50MB, keep 60 days worth of history, but at most 20GB -->
+                <maxFileSize>50MB</maxFileSize>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>20GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <appender name="serverAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_HOME}/server/server-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+                <!-- each file should be at most 50MB, keep 60 days worth of history, but at most 20GB -->
+                <maxFileSize>50MB</maxFileSize>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>20GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <appender name="ftpAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_HOME}/ftp/ftp-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+                <!-- each file should be at most 50MB, keep 60 days worth of history, but at most 20GB -->
+                <maxFileSize>50MB</maxFileSize>
+                <maxHistory>60</maxHistory>
+                <totalSizeCap>20GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="STDOUT" />
+            <appender-ref ref="infoAppender"/>
+        </root>
+
+        <logger name="serial" level="info" additivity="false">
+            <appender-ref ref="serialAppender"/>
+        </logger>
+
+        <logger name="net" level="info" additivity="false">
+            <appender-ref ref="netAppender"/>
+        </logger>
+
+        <logger name="script" level="info" additivity="false">
+            <appender-ref ref="scriptAppender"/>
+        </logger>
+
+        <logger name="server" level="info" additivity="false">
+            <appender-ref ref="serverAppender"/>
+        </logger>
+
+        <logger name="ftp" level="info" additivity="false">
+            <appender-ref ref="ftpAppender"/>
+        </logger>
+
+    </springProfile>
+
+    <springProfile name="prod">
+        <appender name="infoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>${LOG_HOME_Prod}/log/%d{yyyy-MM-dd}.log</FileNamePattern>
+                <maxHistory>60</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+            </encoder>
+        </appender>
+
+        <appender name="messageAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>${LOG_HOME_Prod}/message/%d{yyyy-MM-dd}.log</FileNamePattern>
+                <maxHistory>60</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <pattern>%msg %n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="smsAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>${LOG_HOME_Prod}/sms/%d{yyyy-MM-dd}.log</FileNamePattern>
+                <maxHistory>60</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <pattern>%d{HH:mm:ss.SSS} - %msg %n</pattern>
+            </encoder>
+        </appender>
+
+        <root level="info" >
+            <appender-ref ref="infoAppender" />
+            <appender-ref ref="CONSOLE" />
+        </root>
+
+        <logger name="parser" level="info" additivity="false">
+            <appender-ref ref="messageAppender"/>
+        </logger>
+
+        <logger name="sms" level="info" additivity="false">
+            <appender-ref ref="smsAppender"/>
+        </logger>
+
+    </springProfile>
+
+
+</configuration>
