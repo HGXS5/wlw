@@ -1,0 +1,934 @@
+16:47:47.749 [Thread-9] INFO  net - Net Client Clear recvByteList 
+16:47:48.081 [pool-3-thread-1] INFO  net - Net Client Clear 
+16:47:49.146 [pool-10-thread-1] INFO  net - Net Client Clear 
+16:47:49.459 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:47:49.894 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:47:50.255 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 01 00 00 00 06 02 02 00 00 00 80  
+16:47:50.319 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:47:50.761 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 01 00 00 00 06 02 01 00 00 00 80  
+16:47:50.762 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:47:51.269 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 01 00 00 00 06 02 04 00 00 00 08  
+16:47:51.772 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 02 00 00 00 06 02 02 00 00 00 80  
+16:47:52.037 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:47:52.287 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 02 00 00 00 06 02 01 00 00 00 80  
+16:47:52.458 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:47:52.800 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 02 00 00 00 06 02 04 00 00 00 08  
+16:47:52.878 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:47:53.306 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 03 00 00 00 06 02 02 00 00 00 80  
+16:47:53.306 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:47:53.812 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 03 00 00 00 06 02 01 00 00 00 80  
+16:47:54.313 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 03 00 00 00 06 02 04 00 00 00 08  
+16:47:54.583 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:47:54.821 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 04 00 00 00 06 02 02 00 00 00 80  
+16:47:55.013 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:47:55.333 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 04 00 00 00 06 02 01 00 00 00 80  
+16:47:55.443 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:47:55.838 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 04 00 00 00 06 02 04 00 00 00 08  
+16:47:55.869 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:47:56.352 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 05 00 00 00 06 02 02 00 00 00 80  
+16:47:56.853 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 05 00 00 00 06 02 01 00 00 00 80  
+16:47:57.368 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 05 00 00 00 06 02 04 00 00 00 08  
+16:47:57.883 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 06 00 00 00 06 02 02 00 00 00 80  
+16:47:58.163 [pool-3-thread-2] INFO  net - Net Client Clear 
+16:47:58.399 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 06 00 00 00 06 02 01 00 00 00 80  
+16:47:58.902 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 06 00 00 00 06 02 04 00 00 00 08  
+16:47:59.234 [pool-10-thread-2] INFO  net - Net Client Clear 
+16:47:59.407 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 07 00 00 00 06 02 02 00 00 00 80  
+16:47:59.535 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:47:59.910 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 07 00 00 00 06 02 01 00 00 00 80  
+16:48:00.005 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:48:00.379 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:48:00.410 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 07 00 00 00 06 02 04 00 00 00 08  
+16:48:00.862 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:48:00.924 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 08 00 00 00 06 02 02 00 00 00 80  
+16:48:01.426 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 08 00 00 00 06 02 01 00 00 00 80  
+16:48:01.930 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 08 00 00 00 06 02 04 00 00 00 08  
+16:48:02.071 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:48:02.443 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 09 00 00 00 06 02 02 00 00 00 80  
+16:48:02.553 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:48:02.915 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:48:02.947 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 09 00 00 00 06 02 01 00 00 00 80  
+16:48:03.404 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:48:03.452 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 09 00 00 00 06 02 04 00 00 00 08  
+16:48:03.956 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0A 00 00 00 06 02 02 00 00 00 80  
+16:48:04.463 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0A 00 00 00 06 02 01 00 00 00 80  
+16:48:04.622 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:48:04.969 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0A 00 00 00 06 02 04 00 00 00 08  
+16:48:05.112 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:48:05.472 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:48:05.472 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0B 00 00 00 06 02 02 00 00 00 80  
+16:48:05.746 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:48:05.967 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:48:05.983 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0B 00 00 00 06 02 01 00 00 00 80  
+16:48:06.110 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:48:06.490 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0B 00 00 00 06 02 04 00 00 00 08  
+16:48:06.505 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:48:06.868 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:48:06.994 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0C 00 00 00 06 02 02 00 00 00 80  
+16:48:07.169 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:48:07.488 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:48:07.501 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0C 00 00 00 06 02 01 00 00 00 80  
+16:48:07.923 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:48:08.009 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0C 00 00 00 06 02 04 00 00 00 08  
+16:48:08.261 [pool-3-thread-3] INFO  net - Net Client Clear 
+16:48:08.339 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:48:08.514 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0D 00 00 00 06 02 02 00 00 00 80  
+16:48:08.799 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:48:09.016 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0D 00 00 00 06 02 01 00 00 00 80  
+16:48:09.313 [pool-10-thread-3] INFO  net - Net Client Clear 
+16:48:09.527 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0D 00 00 00 06 02 04 00 00 00 08  
+16:48:09.621 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:48:10.040 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0E 00 00 00 06 02 02 00 00 00 80  
+16:48:10.120 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:48:10.463 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:48:10.542 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0E 00 00 00 06 02 01 00 00 00 80  
+16:48:10.949 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:48:11.043 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0E 00 00 00 06 02 04 00 00 00 08  
+16:48:11.550 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0F 00 00 00 06 02 02 00 00 00 80  
+16:48:12.059 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0F 00 00 00 06 02 01 00 00 00 80  
+16:48:12.170 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:48:12.568 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 0F 00 00 00 06 02 04 00 00 00 08  
+16:48:12.680 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:48:13.031 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:48:13.079 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 10 00 00 00 06 02 02 00 00 00 80  
+16:48:13.546 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:48:13.593 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 10 00 00 00 06 02 01 00 00 00 80  
+16:48:14.096 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 10 00 00 00 06 02 04 00 00 00 08  
+16:48:14.599 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 11 00 00 00 06 02 02 00 00 00 80  
+16:48:14.726 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:48:15.114 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 11 00 00 00 06 02 01 00 00 00 80  
+16:48:15.240 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:48:15.568 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:48:15.616 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 11 00 00 00 06 02 04 00 00 00 08  
+16:48:15.823 [Thread-12] INFO  net - Net Client Clear 
+16:48:16.092 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:48:16.123 [Thread-13] INFO  net - Net Client Clear 
+16:48:16.123 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 12 00 00 00 06 02 02 00 00 00 80  
+16:48:16.655 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 12 00 00 00 06 02 01 00 00 00 80  
+16:48:17.160 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 12 00 00 00 06 02 04 00 00 00 08  
+16:48:17.665 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 13 00 00 00 06 02 02 00 00 00 80  
+16:48:18.176 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 13 00 00 00 06 02 01 00 00 00 80  
+16:48:18.322 [pool-3-thread-4] INFO  net - Net Client Clear 
+16:48:18.470 [Thread-12] INFO  net - Net Client Clear 
+16:48:18.655 [Thread-13] INFO  net - Net Client Clear 
+16:48:18.686 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 13 00 00 00 06 02 04 00 00 00 08  
+16:48:19.195 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 14 00 00 00 06 02 02 00 00 00 80  
+16:48:19.378 [pool-10-thread-4] INFO  net - Net Client Clear 
+16:48:19.684 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:48:19.700 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 14 00 00 00 06 02 01 00 00 00 80  
+16:48:20.150 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:48:20.214 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 14 00 00 00 06 02 04 00 00 00 08  
+16:48:20.547 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:48:20.722 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 15 00 00 00 06 02 02 00 00 00 80  
+16:48:21.009 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:48:21.136 [Thread-12] INFO  net - Net Client Clear 
+16:48:21.215 [Thread-13] INFO  net - Net Client Clear 
+16:48:21.231 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 15 00 00 00 06 02 01 00 00 00 80  
+16:48:21.733 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 15 00 00 00 06 02 04 00 00 00 08  
+16:48:22.248 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 16 00 00 00 06 02 02 00 00 00 80  
+16:48:22.263 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:48:22.716 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:48:22.762 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 16 00 00 00 06 02 01 00 00 00 80  
+16:48:23.105 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:48:23.277 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 16 00 00 00 06 02 04 00 00 00 08  
+16:48:23.544 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:48:23.746 [Thread-13] INFO  net - Net Client Clear 
+16:48:23.762 [Thread-12] INFO  net - Net Client Clear 
+16:48:23.778 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 17 00 00 00 06 02 02 00 00 00 80  
+16:48:24.292 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 17 00 00 00 06 02 01 00 00 00 80  
+16:48:24.799 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 17 00 00 00 06 02 04 00 00 00 08  
+16:48:24.863 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:48:25.259 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:48:25.306 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 18 00 00 00 06 02 02 00 00 00 80  
+16:48:25.650 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:48:25.810 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 18 00 00 00 06 02 01 00 00 00 80  
+16:48:26.094 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:48:26.263 [Thread-13] INFO  net - Net Client Clear 
+16:48:26.325 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 18 00 00 00 06 02 04 00 00 00 08  
+16:48:26.387 [Thread-12] INFO  net - Net Client Clear 
+16:48:26.840 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 19 00 00 00 06 02 02 00 00 00 80  
+16:48:27.341 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 19 00 00 00 06 02 01 00 00 00 80  
+16:48:27.806 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:48:27.854 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 19 00 00 00 06 02 04 00 00 00 08  
+16:48:28.182 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:48:28.369 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1A 00 00 00 06 02 02 00 00 00 80  
+16:48:28.385 [pool-3-thread-5] INFO  net - Net Client Clear 
+16:48:28.561 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:48:28.881 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1A 00 00 00 06 02 01 00 00 00 80  
+16:48:28.897 [Thread-13] INFO  net - Net Client Clear 
+16:48:28.928 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:48:29.024 [Thread-12] INFO  net - Net Client Clear 
+16:48:29.215 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:48:29.390 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1A 00 00 00 06 02 04 00 00 00 08  
+16:48:29.452 [pool-10-thread-5] INFO  net - Net Client Clear 
+16:48:29.529 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:48:29.794 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:48:29.890 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1B 00 00 00 06 02 02 00 00 00 80  
+16:48:29.967 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:48:30.234 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:48:30.375 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:48:30.391 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1B 00 00 00 06 02 01 00 00 00 80  
+16:48:30.631 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:48:30.835 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:48:30.898 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1B 00 00 00 06 02 04 00 00 00 08  
+16:48:31.102 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:48:31.403 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1C 00 00 00 06 02 02 00 00 00 80  
+16:48:31.418 [Thread-13] INFO  net - Net Client Clear 
+16:48:31.657 [Thread-12] INFO  net - Net Client Clear 
+16:48:31.907 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1C 00 00 00 06 02 01 00 00 00 80  
+16:48:32.351 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:48:32.415 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1C 00 00 00 06 02 04 00 00 00 08  
+16:48:32.794 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:48:32.921 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1D 00 00 00 06 02 02 00 00 00 80  
+16:48:33.190 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:48:33.427 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1D 00 00 00 06 02 01 00 00 00 80  
+16:48:33.660 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:48:33.941 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1D 00 00 00 06 02 04 00 00 00 08  
+16:48:33.941 [Thread-13] INFO  net - Net Client Clear 
+16:48:34.298 [Thread-12] INFO  net - Net Client Clear 
+16:48:34.453 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1E 00 00 00 06 02 02 00 00 00 80  
+16:48:34.894 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:48:34.955 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1E 00 00 00 06 02 01 00 00 00 80  
+16:48:35.334 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:48:35.461 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1E 00 00 00 06 02 04 00 00 00 08  
+16:48:35.790 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:48:35.962 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1F 00 00 00 06 02 02 00 00 00 80  
+16:48:36.201 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:48:36.470 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1F 00 00 00 06 02 01 00 00 00 80  
+16:48:36.517 [Thread-13] INFO  net - Net Client Clear 
+16:48:36.932 [Thread-12] INFO  net - Net Client Clear 
+16:48:36.980 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 1F 00 00 00 06 02 04 00 00 00 08  
+16:48:37.488 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 20 00 00 00 06 02 02 00 00 00 80  
+16:48:37.991 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 20 00 00 00 06 02 01 00 00 00 80  
+16:48:38.464 [pool-3-thread-6] INFO  net - Net Client Clear 
+16:48:38.495 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 20 00 00 00 06 02 04 00 00 00 08  
+16:48:38.998 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 21 00 00 00 06 02 02 00 00 00 80  
+16:48:39.046 [Thread-13] INFO  net - Net Client Clear 
+16:48:39.500 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 21 00 00 00 06 02 01 00 00 00 80  
+16:48:39.531 [pool-10-thread-6] INFO  net - Net Client Clear 
+16:48:39.563 [Thread-12] INFO  net - Net Client Clear 
+16:48:39.891 [pool-11-thread-6] INFO  net - Net Client Clear 
+16:48:40.012 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 21 00 00 00 06 02 04 00 00 00 08  
+16:48:40.327 [pool-12-thread-6] INFO  net - Net Client Clear 
+16:48:40.515 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 22 00 00 00 06 02 02 00 00 00 80  
+16:48:40.718 [pool-13-thread-6] INFO  net - Net Client Clear 
+16:48:41.021 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 22 00 00 00 06 02 01 00 00 00 80  
+16:48:41.179 [pool-14-thread-6] INFO  net - Net Client Clear 
+16:48:41.529 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 22 00 00 00 06 02 04 00 00 00 08  
+16:48:41.717 [Thread-13] INFO  net - Net Client Clear 
+16:48:42.029 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 23 00 00 00 06 02 02 00 00 00 80  
+16:48:42.248 [Thread-12] INFO  net - Net Client Clear 
+16:48:42.453 [pool-11-thread-6] INFO  net - Net Client Clear 
+16:48:42.531 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 23 00 00 00 06 02 01 00 00 00 80  
+16:48:42.888 [pool-12-thread-6] INFO  net - Net Client Clear 
+16:48:43.043 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 23 00 00 00 06 02 04 00 00 00 08  
+16:48:43.263 [pool-13-thread-6] INFO  net - Net Client Clear 
+16:48:43.544 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 24 00 00 00 06 02 02 00 00 00 80  
+16:48:43.716 [pool-14-thread-6] INFO  net - Net Client Clear 
+16:48:44.057 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 24 00 00 00 06 02 01 00 00 00 80  
+16:48:44.290 [Thread-13] INFO  net - Net Client Clear 
+16:48:44.573 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 24 00 00 00 06 02 04 00 00 00 08  
+16:48:44.948 [Thread-12] INFO  net - Net Client Clear 
+16:48:45.044 [pool-11-thread-6] INFO  net - Net Client Clear 
+16:48:45.076 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 25 00 00 00 06 02 02 00 00 00 80  
+16:48:45.488 [pool-12-thread-6] INFO  net - Net Client Clear 
+16:48:45.581 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 25 00 00 00 06 02 01 00 00 00 80  
+16:48:45.804 [pool-13-thread-6] INFO  net - Net Client Clear 
+16:48:46.085 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 25 00 00 00 06 02 04 00 00 00 08  
+16:48:46.257 [pool-14-thread-6] INFO  net - Net Client Clear 
+16:48:46.587 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 26 00 00 00 06 02 02 00 00 00 80  
+16:48:46.805 [Thread-13] INFO  net - Net Client Clear 
+16:48:47.089 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 26 00 00 00 06 02 01 00 00 00 80  
+16:48:47.588 [Thread-12] INFO  net - Net Client Clear 
+16:48:47.604 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 26 00 00 00 06 02 04 00 00 00 08  
+16:48:48.117 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 27 00 00 00 06 02 02 00 00 00 80  
+16:48:48.546 [pool-3-thread-7] INFO  net - Net Client Clear 
+16:48:48.623 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 27 00 00 00 06 02 01 00 00 00 80  
+16:48:49.129 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 27 00 00 00 06 02 04 00 00 00 08  
+16:48:49.384 [Thread-13] INFO  net - Net Client Clear 
+16:48:49.623 [pool-10-thread-7] INFO  net - Net Client Clear 
+16:48:49.638 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 28 00 00 00 06 02 02 00 00 00 80  
+16:48:49.845 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:48:49.988 [pool-11-thread-7] INFO  net - Net Client Clear 
+16:48:50.144 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 28 00 00 00 06 02 01 00 00 00 80  
+16:48:50.207 [Thread-12] INFO  net - Net Client Clear 
+16:48:50.222 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:48:50.396 [pool-12-thread-7] INFO  net - Net Client Clear 
+16:48:50.614 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:48:50.646 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 28 00 00 00 06 02 04 00 00 00 08  
+16:48:50.834 [pool-13-thread-7] INFO  net - Net Client Clear 
+16:48:50.988 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:48:51.159 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 29 00 00 00 06 02 02 00 00 00 80  
+16:48:51.269 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:48:51.284 [pool-14-thread-7] INFO  net - Net Client Clear 
+16:48:51.595 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:48:51.673 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 29 00 00 00 06 02 01 00 00 00 80  
+16:48:51.922 [Thread-13] INFO  net - Net Client Clear 
+16:48:51.999 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:48:52.187 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 29 00 00 00 06 02 04 00 00 00 08  
+16:48:52.436 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:48:52.591 [pool-11-thread-7] INFO  net - Net Client Clear 
+16:48:52.700 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2A 00 00 00 06 02 02 00 00 00 80  
+16:48:52.886 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:48:52.902 [Thread-12] INFO  net - Net Client Clear 
+16:48:52.995 [pool-12-thread-7] INFO  net - Net Client Clear 
+16:48:53.201 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2A 00 00 00 06 02 01 00 00 00 80  
+16:48:53.440 [pool-13-thread-7] INFO  net - Net Client Clear 
+16:48:53.712 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2A 00 00 00 06 02 04 00 00 00 08  
+16:48:53.887 [pool-14-thread-7] INFO  net - Net Client Clear 
+16:48:54.219 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2B 00 00 00 06 02 02 00 00 00 80  
+16:48:54.609 [Thread-13] INFO  net - Net Client Clear 
+16:48:54.734 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2B 00 00 00 06 02 01 00 00 00 80  
+16:48:55.156 [pool-11-thread-7] INFO  net - Net Client Clear 
+16:48:55.248 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2B 00 00 00 06 02 04 00 00 00 08  
+16:48:55.544 [Thread-12] INFO  net - Net Client Clear 
+16:48:55.560 [pool-12-thread-7] INFO  net - Net Client Clear 
+16:48:55.762 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2C 00 00 00 06 02 02 00 00 00 80  
+16:48:55.983 [pool-13-thread-7] INFO  net - Net Client Clear 
+16:48:56.277 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2C 00 00 00 06 02 01 00 00 00 80  
+16:48:56.433 [pool-14-thread-7] INFO  net - Net Client Clear 
+16:48:56.778 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2C 00 00 00 06 02 04 00 00 00 08  
+16:48:57.199 [Thread-13] INFO  net - Net Client Clear 
+16:48:57.278 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2D 00 00 00 06 02 02 00 00 00 80  
+16:48:57.790 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2D 00 00 00 06 02 01 00 00 00 80  
+16:48:58.236 [Thread-12] INFO  net - Net Client Clear 
+16:48:58.300 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2D 00 00 00 06 02 04 00 00 00 08  
+16:48:58.660 [pool-3-thread-8] INFO  net - Net Client Clear 
+16:48:58.815 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2E 00 00 00 06 02 02 00 00 00 80  
+16:48:59.315 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2E 00 00 00 06 02 01 00 00 00 80  
+16:48:59.735 [Thread-13] INFO  net - Net Client Clear 
+16:48:59.735 [pool-10-thread-8] INFO  net - Net Client Clear 
+16:48:59.831 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2E 00 00 00 06 02 04 00 00 00 08  
+16:49:00.080 [pool-11-thread-8] INFO  net - Net Client Clear 
+16:49:00.344 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2F 00 00 00 06 02 02 00 00 00 80  
+16:49:00.500 [pool-12-thread-8] INFO  net - Net Client Clear 
+16:49:00.845 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2F 00 00 00 06 02 01 00 00 00 80  
+16:49:00.860 [Thread-12] INFO  net - Net Client Clear 
+16:49:00.923 [pool-13-thread-8] INFO  net - Net Client Clear 
+16:49:01.358 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 2F 00 00 00 06 02 04 00 00 00 08  
+16:49:01.390 [pool-14-thread-8] INFO  net - Net Client Clear 
+16:49:01.866 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 30 00 00 00 06 02 02 00 00 00 80  
+16:49:02.265 [Thread-13] INFO  net - Net Client Clear 
+16:49:02.377 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 30 00 00 00 06 02 01 00 00 00 80  
+16:49:02.627 [pool-11-thread-8] INFO  net - Net Client Clear 
+16:49:02.892 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 30 00 00 00 06 02 04 00 00 00 08  
+16:49:03.063 [pool-12-thread-8] INFO  net - Net Client Clear 
+16:49:03.407 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 31 00 00 00 06 02 02 00 00 00 80  
+16:49:03.485 [pool-13-thread-8] INFO  net - Net Client Clear 
+16:49:03.500 [Thread-12] INFO  net - Net Client Clear 
+16:49:03.922 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 31 00 00 00 06 02 01 00 00 00 80  
+16:49:03.953 [pool-14-thread-8] INFO  net - Net Client Clear 
+16:49:04.436 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 31 00 00 00 06 02 04 00 00 00 08  
+16:49:04.795 [Thread-13] INFO  net - Net Client Clear 
+16:49:04.952 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 32 00 00 00 06 02 02 00 00 00 80  
+16:49:05.218 [pool-11-thread-8] INFO  net - Net Client Clear 
+16:49:05.452 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 32 00 00 00 06 02 01 00 00 00 80  
+16:49:05.659 [pool-12-thread-8] INFO  net - Net Client Clear 
+16:49:05.959 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 32 00 00 00 06 02 04 00 00 00 08  
+16:49:06.086 [pool-13-thread-8] INFO  net - Net Client Clear 
+16:49:06.198 [Thread-12] INFO  net - Net Client Clear 
+16:49:06.468 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 33 00 00 00 06 02 02 00 00 00 80  
+16:49:06.499 [pool-14-thread-8] INFO  net - Net Client Clear 
+16:49:06.975 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 33 00 00 00 06 02 01 00 00 00 80  
+16:49:07.432 [Thread-13] INFO  net - Net Client Clear 
+16:49:07.480 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 33 00 00 00 06 02 04 00 00 00 08  
+16:49:07.983 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 34 00 00 00 06 02 02 00 00 00 80  
+16:49:08.492 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 34 00 00 00 06 02 01 00 00 00 80  
+16:49:08.760 [pool-3-thread-1] INFO  net - Net Client Clear 
+16:49:08.837 [Thread-12] INFO  net - Net Client Clear 
+16:49:08.993 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 34 00 00 00 06 02 04 00 00 00 08  
+16:49:09.496 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 35 00 00 00 06 02 02 00 00 00 80  
+16:49:09.826 [pool-10-thread-1] INFO  net - Net Client Clear 
+16:49:09.954 [Thread-13] INFO  net - Net Client Clear 
+16:49:10.001 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 35 00 00 00 06 02 01 00 00 00 80  
+16:49:10.191 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:49:10.509 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 35 00 00 00 06 02 04 00 00 00 08  
+16:49:10.588 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:49:11.018 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 36 00 00 00 06 02 02 00 00 00 80  
+16:49:11.018 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:49:11.461 [Thread-12] INFO  net - Net Client Clear 
+16:49:11.492 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:49:11.524 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 36 00 00 00 06 02 01 00 00 00 80  
+16:49:11.915 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:49:12.039 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 36 00 00 00 06 02 04 00 00 00 08  
+16:49:12.274 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:49:12.479 [Thread-13] INFO  net - Net Client Clear 
+16:49:12.542 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 37 00 00 00 06 02 02 00 00 00 80  
+16:49:12.666 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:49:12.758 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:49:13.028 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:49:13.043 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 37 00 00 00 06 02 01 00 00 00 80  
+16:49:13.137 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:49:13.310 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:49:13.546 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 37 00 00 00 06 02 04 00 00 00 08  
+16:49:13.561 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:49:13.640 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:49:14.037 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:49:14.053 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 38 00 00 00 06 02 02 00 00 00 80  
+16:49:14.053 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:49:14.084 [Thread-12] INFO  net - Net Client Clear 
+16:49:14.483 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:49:14.562 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 38 00 00 00 06 02 01 00 00 00 80  
+16:49:14.930 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:49:14.992 [Thread-13] INFO  net - Net Client Clear 
+16:49:15.071 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 38 00 00 00 06 02 04 00 00 00 08  
+16:49:15.324 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:49:15.575 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 39 00 00 00 06 02 02 00 00 00 80  
+16:49:15.701 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:49:16.090 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 39 00 00 00 06 02 01 00 00 00 80  
+16:49:16.137 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:49:16.602 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:49:16.602 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 39 00 00 00 06 02 04 00 00 00 08  
+16:49:16.729 [Thread-12] INFO  net - Net Client Clear 
+16:49:17.116 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3A 00 00 00 06 02 02 00 00 00 80  
+16:49:17.524 [Thread-13] INFO  net - Net Client Clear 
+16:49:17.619 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3A 00 00 00 06 02 01 00 00 00 80  
+16:49:18.122 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3A 00 00 00 06 02 04 00 00 00 08  
+16:49:18.629 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3B 00 00 00 06 02 02 00 00 00 80  
+16:49:18.836 [pool-3-thread-2] INFO  net - Net Client Clear 
+16:49:19.135 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3B 00 00 00 06 02 01 00 00 00 80  
+16:49:19.420 [Thread-12] INFO  net - Net Client Clear 
+16:49:19.644 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3B 00 00 00 06 02 04 00 00 00 08  
+16:49:19.908 [pool-10-thread-2] INFO  net - Net Client Clear 
+16:49:20.159 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3C 00 00 00 06 02 02 00 00 00 80  
+16:49:20.159 [Thread-13] INFO  net - Net Client Clear 
+16:49:20.253 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:49:20.673 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3C 00 00 00 06 02 01 00 00 00 80  
+16:49:20.673 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:49:21.081 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:49:21.174 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3C 00 00 00 06 02 04 00 00 00 08  
+16:49:21.567 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:49:21.678 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3D 00 00 00 06 02 02 00 00 00 80  
+16:49:22.036 [Thread-12] INFO  net - Net Client Clear 
+16:49:22.180 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3D 00 00 00 06 02 01 00 00 00 80  
+16:49:22.687 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3D 00 00 00 06 02 04 00 00 00 08  
+16:49:22.735 [Thread-13] INFO  net - Net Client Clear 
+16:49:22.798 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:49:23.192 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3E 00 00 00 06 02 02 00 00 00 80  
+16:49:23.223 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:49:23.635 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:49:23.699 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3E 00 00 00 06 02 01 00 00 00 80  
+16:49:24.123 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:49:24.201 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3E 00 00 00 06 02 04 00 00 00 08  
+16:49:24.671 [Thread-12] INFO  net - Net Client Clear 
+16:49:24.703 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3F 00 00 00 06 02 02 00 00 00 80  
+16:49:25.209 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3F 00 00 00 06 02 01 00 00 00 80  
+16:49:25.256 [Thread-13] INFO  net - Net Client Clear 
+16:49:25.352 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:49:25.711 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 3F 00 00 00 06 02 04 00 00 00 08  
+16:49:25.775 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:49:26.181 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:49:26.213 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 40 00 00 00 06 02 02 00 00 00 80  
+16:49:26.681 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:49:26.728 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 40 00 00 00 06 02 01 00 00 00 80  
+16:49:27.236 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 40 00 00 00 06 02 04 00 00 00 08  
+16:49:27.300 [Thread-12] INFO  net - Net Client Clear 
+16:49:27.741 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 41 00 00 00 06 02 02 00 00 00 80  
+16:49:27.787 [Thread-13] INFO  net - Net Client Clear 
+16:49:28.253 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 41 00 00 00 06 02 01 00 00 00 80  
+16:49:28.753 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 41 00 00 00 06 02 04 00 00 00 08  
+16:49:28.895 [pool-3-thread-3] INFO  net - Net Client Clear 
+16:49:29.255 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 42 00 00 00 06 02 02 00 00 00 80  
+16:49:29.769 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 42 00 00 00 06 02 01 00 00 00 80  
+16:49:29.971 [pool-10-thread-3] INFO  net - Net Client Clear 
+16:49:29.987 [Thread-12] INFO  net - Net Client Clear 
+16:49:30.283 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 42 00 00 00 06 02 04 00 00 00 08  
+16:49:30.330 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:49:30.361 [Thread-13] INFO  net - Net Client Clear 
+16:49:30.757 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:49:30.789 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 43 00 00 00 06 02 02 00 00 00 80  
+16:49:31.151 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:49:31.295 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 43 00 00 00 06 02 01 00 00 00 80  
+16:49:31.659 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:49:31.801 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 43 00 00 00 06 02 04 00 00 00 08  
+16:49:32.302 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 44 00 00 00 06 02 02 00 00 00 80  
+16:49:32.613 [Thread-12] INFO  net - Net Client Clear 
+16:49:32.816 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 44 00 00 00 06 02 01 00 00 00 80  
+16:49:32.894 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:49:33.005 [Thread-13] INFO  net - Net Client Clear 
+16:49:33.303 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:49:33.318 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 44 00 00 00 06 02 04 00 00 00 08  
+16:49:33.706 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:49:33.832 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 45 00 00 00 06 02 02 00 00 00 80  
+16:49:33.957 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:49:34.270 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:49:34.331 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:49:34.346 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 45 00 00 00 06 02 01 00 00 00 80  
+16:49:34.706 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:49:34.847 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 45 00 00 00 06 02 04 00 00 00 08  
+16:49:35.076 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:49:35.293 [Thread-12] INFO  net - Net Client Clear 
+16:49:35.357 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 46 00 00 00 06 02 02 00 00 00 80  
+16:49:35.357 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:49:35.437 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:49:35.596 [Thread-13] INFO  net - Net Client Clear 
+16:49:35.693 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:49:35.852 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:49:35.868 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 46 00 00 00 06 02 01 00 00 00 80  
+16:49:36.105 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:49:36.261 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:49:36.368 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 46 00 00 00 06 02 04 00 00 00 08  
+16:49:36.541 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:49:36.825 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:49:36.873 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 47 00 00 00 06 02 02 00 00 00 80  
+16:49:36.984 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:49:37.376 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 47 00 00 00 06 02 01 00 00 00 80  
+16:49:37.879 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 47 00 00 00 06 02 04 00 00 00 08  
+16:49:37.926 [Thread-12] INFO  net - Net Client Clear 
+16:49:38.111 [Thread-13] INFO  net - Net Client Clear 
+16:49:38.394 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 48 00 00 00 06 02 02 00 00 00 80  
+16:49:38.896 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 48 00 00 00 06 02 01 00 00 00 80  
+16:49:38.960 [pool-3-thread-4] INFO  net - Net Client Clear 
+16:49:39.405 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 48 00 00 00 06 02 04 00 00 00 08  
+16:49:39.913 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 49 00 00 00 06 02 02 00 00 00 80  
+16:49:40.039 [pool-10-thread-4] INFO  net - Net Client Clear 
+16:49:40.417 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:49:40.417 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 49 00 00 00 06 02 01 00 00 00 80  
+16:49:40.559 [Thread-12] INFO  net - Net Client Clear 
+16:49:40.639 [Thread-13] INFO  net - Net Client Clear 
+16:49:40.813 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:49:40.923 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 49 00 00 00 06 02 04 00 00 00 08  
+16:49:41.239 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:49:41.428 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4A 00 00 00 06 02 02 00 00 00 80  
+16:49:41.708 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:49:41.942 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4A 00 00 00 06 02 01 00 00 00 80  
+16:49:42.457 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4A 00 00 00 06 02 04 00 00 00 08  
+16:49:42.961 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4B 00 00 00 06 02 02 00 00 00 80  
+16:49:42.961 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:49:43.169 [Thread-13] INFO  net - Net Client Clear 
+16:49:43.185 [Thread-12] INFO  net - Net Client Clear 
+16:49:43.360 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:49:43.472 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4B 00 00 00 06 02 01 00 00 00 80  
+16:49:43.790 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:49:43.980 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4B 00 00 00 06 02 04 00 00 00 08  
+16:49:44.264 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:49:44.485 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4C 00 00 00 06 02 02 00 00 00 80  
+16:49:44.989 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4C 00 00 00 06 02 01 00 00 00 80  
+16:49:45.502 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4C 00 00 00 06 02 04 00 00 00 08  
+16:49:45.533 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:49:45.813 [Thread-13] INFO  net - Net Client Clear 
+16:49:45.829 [Thread-12] INFO  net - Net Client Clear 
+16:49:45.922 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:49:46.015 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4D 00 00 00 06 02 02 00 00 00 80  
+16:49:46.342 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:49:46.529 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4D 00 00 00 06 02 01 00 00 00 80  
+16:49:46.873 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:49:47.044 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4D 00 00 00 06 02 04 00 00 00 08  
+16:49:47.548 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4E 00 00 00 06 02 02 00 00 00 80  
+16:49:48.056 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4E 00 00 00 06 02 01 00 00 00 80  
+16:49:48.389 [Thread-13] INFO  net - Net Client Clear 
+16:49:48.517 [Thread-12] INFO  net - Net Client Clear 
+16:49:48.565 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4E 00 00 00 06 02 04 00 00 00 08  
+16:49:49.035 [pool-3-thread-5] INFO  net - Net Client Clear 
+16:49:49.066 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4F 00 00 00 06 02 02 00 00 00 80  
+16:49:49.579 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4F 00 00 00 06 02 01 00 00 00 80  
+16:49:50.093 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 4F 00 00 00 06 02 04 00 00 00 08  
+16:49:50.124 [pool-10-thread-5] INFO  net - Net Client Clear 
+16:49:50.504 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:49:50.598 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 50 00 00 00 06 02 02 00 00 00 80  
+16:49:50.895 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:49:50.910 [Thread-13] INFO  net - Net Client Clear 
+16:49:51.113 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 50 00 00 00 06 02 01 00 00 00 80  
+16:49:51.207 [Thread-12] INFO  net - Net Client Clear 
+16:49:51.345 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:49:51.628 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 50 00 00 00 06 02 04 00 00 00 08  
+16:49:51.799 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:49:52.133 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 51 00 00 00 06 02 02 00 00 00 80  
+16:49:52.642 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 51 00 00 00 06 02 01 00 00 00 80  
+16:49:53.048 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:49:53.157 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 51 00 00 00 06 02 04 00 00 00 08  
+16:49:53.454 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:49:53.485 [Thread-13] INFO  net - Net Client Clear 
+16:49:53.658 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 52 00 00 00 06 02 02 00 00 00 80  
+16:49:53.846 [Thread-12] INFO  net - Net Client Clear 
+16:49:53.893 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:49:54.161 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 52 00 00 00 06 02 01 00 00 00 80  
+16:49:54.347 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:49:54.673 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 52 00 00 00 06 02 04 00 00 00 08  
+16:49:55.179 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 53 00 00 00 06 02 02 00 00 00 80  
+16:49:55.585 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:49:55.693 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 53 00 00 00 06 02 01 00 00 00 80  
+16:49:55.995 [Thread-13] INFO  net - Net Client Clear 
+16:49:55.995 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:49:55.995 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:49:56.200 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 53 00 00 00 06 02 04 00 00 00 08  
+16:49:56.391 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:49:56.439 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:49:56.533 [Thread-12] INFO  net - Net Client Clear 
+16:49:56.709 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 54 00 00 00 06 02 02 00 00 00 80  
+16:49:56.741 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:49:56.900 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:49:57.134 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:49:57.214 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 54 00 00 00 06 02 01 00 00 00 80  
+16:49:57.418 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:49:57.716 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 54 00 00 00 06 02 04 00 00 00 08  
+16:49:57.732 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:49:58.137 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:49:58.231 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 55 00 00 00 06 02 02 00 00 00 80  
+16:49:58.606 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:49:58.637 [Thread-13] INFO  net - Net Client Clear 
+16:49:58.745 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 55 00 00 00 06 02 01 00 00 00 80  
+16:49:59.030 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:49:59.092 [pool-3-thread-6] INFO  net - Net Client Clear 
+16:49:59.172 [Thread-12] INFO  net - Net Client Clear 
+16:49:59.252 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 55 00 00 00 06 02 04 00 00 00 08  
+16:49:59.755 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 56 00 00 00 06 02 02 00 00 00 80  
+16:50:00.180 [pool-10-thread-6] INFO  net - Net Client Clear 
+16:50:00.259 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 56 00 00 00 06 02 01 00 00 00 80  
+16:50:00.589 [pool-11-thread-6] INFO  net - Net Client Clear 
+16:50:00.763 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 56 00 00 00 06 02 04 00 00 00 08  
+16:50:01.001 [pool-12-thread-6] INFO  net - Net Client Clear 
+16:50:01.157 [Thread-13] INFO  net - Net Client Clear 
+16:50:01.265 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 57 00 00 00 06 02 02 00 00 00 80  
+16:50:01.422 [pool-13-thread-6] INFO  net - Net Client Clear 
+16:50:01.780 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 57 00 00 00 06 02 01 00 00 00 80  
+16:50:01.795 [Thread-12] INFO  net - Net Client Clear 
+16:50:01.889 [pool-14-thread-6] INFO  net - Net Client Clear 
+16:50:02.295 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 57 00 00 00 06 02 04 00 00 00 08  
+16:50:02.810 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 58 00 00 00 06 02 02 00 00 00 80  
+16:50:03.137 [pool-11-thread-6] INFO  net - Net Client Clear 
+16:50:03.324 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 58 00 00 00 06 02 01 00 00 00 80  
+16:50:03.605 [pool-12-thread-6] INFO  net - Net Client Clear 
+16:50:03.744 [Thread-13] INFO  net - Net Client Clear 
+16:50:03.838 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 58 00 00 00 06 02 04 00 00 00 08  
+16:50:04.025 [pool-13-thread-6] INFO  net - Net Client Clear 
+16:50:04.340 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 59 00 00 00 06 02 02 00 00 00 80  
+16:50:04.483 [pool-14-thread-6] INFO  net - Net Client Clear 
+16:50:04.483 [Thread-12] INFO  net - Net Client Clear 
+16:50:04.848 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 59 00 00 00 06 02 01 00 00 00 80  
+16:50:05.354 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 59 00 00 00 06 02 04 00 00 00 08  
+16:50:05.697 [pool-11-thread-6] INFO  net - Net Client Clear 
+16:50:05.868 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5A 00 00 00 06 02 02 00 00 00 80  
+16:50:06.165 [pool-12-thread-6] INFO  net - Net Client Clear 
+16:50:06.273 [Thread-13] INFO  net - Net Client Clear 
+16:50:06.382 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5A 00 00 00 06 02 01 00 00 00 80  
+16:50:06.584 [pool-13-thread-6] INFO  net - Net Client Clear 
+16:50:06.882 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5A 00 00 00 06 02 04 00 00 00 08  
+16:50:07.023 [pool-14-thread-6] INFO  net - Net Client Clear 
+16:50:07.133 [Thread-12] INFO  net - Net Client Clear 
+16:50:07.397 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5B 00 00 00 06 02 02 00 00 00 80  
+16:50:07.898 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5B 00 00 00 06 02 01 00 00 00 80  
+16:50:08.400 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5B 00 00 00 06 02 04 00 00 00 08  
+16:50:08.847 [Thread-13] INFO  net - Net Client Clear 
+16:50:08.910 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5C 00 00 00 06 02 02 00 00 00 80  
+16:50:09.211 [pool-3-thread-7] INFO  net - Net Client Clear 
+16:50:09.417 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5C 00 00 00 06 02 01 00 00 00 80  
+16:50:09.823 [Thread-12] INFO  net - Net Client Clear 
+16:50:09.932 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5C 00 00 00 06 02 04 00 00 00 08  
+16:50:10.289 [pool-10-thread-7] INFO  net - Net Client Clear 
+16:50:10.445 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5D 00 00 00 06 02 02 00 00 00 80  
+16:50:10.680 [pool-11-thread-7] INFO  net - Net Client Clear 
+16:50:10.960 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5D 00 00 00 06 02 01 00 00 00 80  
+16:50:11.116 [pool-12-thread-7] INFO  net - Net Client Clear 
+16:50:11.461 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5D 00 00 00 06 02 04 00 00 00 08  
+16:50:11.476 [Thread-13] INFO  net - Net Client Clear 
+16:50:11.523 [pool-13-thread-7] INFO  net - Net Client Clear 
+16:50:11.967 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5E 00 00 00 06 02 02 00 00 00 80  
+16:50:11.982 [pool-14-thread-7] INFO  net - Net Client Clear 
+16:50:12.469 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5E 00 00 00 06 02 01 00 00 00 80  
+16:50:12.501 [Thread-12] INFO  net - Net Client Clear 
+16:50:12.975 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5E 00 00 00 06 02 04 00 00 00 08  
+16:50:13.231 [pool-11-thread-7] INFO  net - Net Client Clear 
+16:50:13.483 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5F 00 00 00 06 02 02 00 00 00 80  
+16:50:13.673 [pool-12-thread-7] INFO  net - Net Client Clear 
+16:50:13.984 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5F 00 00 00 06 02 01 00 00 00 80  
+16:50:13.999 [Thread-13] INFO  net - Net Client Clear 
+16:50:14.093 [pool-13-thread-7] INFO  net - Net Client Clear 
+16:50:14.485 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 5F 00 00 00 06 02 04 00 00 00 08  
+16:50:14.533 [pool-14-thread-7] INFO  net - Net Client Clear 
+16:50:14.986 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 60 00 00 00 06 02 02 00 00 00 80  
+16:50:15.127 [Thread-12] INFO  net - Net Client Clear 
+16:50:15.500 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 60 00 00 00 06 02 01 00 00 00 80  
+16:50:15.783 [pool-11-thread-7] INFO  net - Net Client Clear 
+16:50:16.001 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 60 00 00 00 06 02 04 00 00 00 08  
+16:50:16.268 [pool-12-thread-7] INFO  net - Net Client Clear 
+16:50:16.503 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 61 00 00 00 06 02 02 00 00 00 80  
+16:50:16.519 [Thread-13] INFO  net - Net Client Clear 
+16:50:16.630 [pool-13-thread-7] INFO  net - Net Client Clear 
+16:50:17.011 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 61 00 00 00 06 02 01 00 00 00 80  
+16:50:17.075 [pool-14-thread-7] INFO  net - Net Client Clear 
+16:50:17.518 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 61 00 00 00 06 02 04 00 00 00 08  
+16:50:17.821 [Thread-12] INFO  net - Net Client Clear 
+16:50:18.024 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 62 00 00 00 06 02 02 00 00 00 80  
+16:50:18.056 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:50:18.431 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:50:18.526 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 62 00 00 00 06 02 01 00 00 00 80  
+16:50:18.778 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:50:19.028 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 62 00 00 00 06 02 04 00 00 00 08  
+16:50:19.044 [Thread-13] INFO  net - Net Client Clear 
+16:50:19.152 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:50:19.279 [pool-3-thread-8] INFO  net - Net Client Clear 
+16:50:19.480 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:50:19.543 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 63 00 00 00 06 02 02 00 00 00 80  
+16:50:19.792 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:50:20.056 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 63 00 00 00 06 02 01 00 00 00 80  
+16:50:20.180 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:50:20.366 [pool-10-thread-8] INFO  net - Net Client Clear 
+16:50:20.445 [Thread-12] INFO  net - Net Client Clear 
+16:50:20.556 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 63 00 00 00 06 02 04 00 00 00 08  
+16:50:20.650 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:50:20.761 [pool-11-thread-8] INFO  net - Net Client Clear 
+16:50:21.061 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 64 00 00 00 06 02 02 00 00 00 80  
+16:50:21.092 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:50:21.187 [pool-12-thread-8] INFO  net - Net Client Clear 
+16:50:21.568 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 64 00 00 00 06 02 01 00 00 00 80  
+16:50:21.616 [pool-13-thread-8] INFO  net - Net Client Clear 
+16:50:21.616 [Thread-13] INFO  net - Net Client Clear 
+16:50:22.069 [pool-14-thread-8] INFO  net - Net Client Clear 
+16:50:22.069 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 64 00 00 00 06 02 04 00 00 00 08  
+16:50:22.570 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 65 00 00 00 06 02 02 00 00 00 80  
+16:50:23.072 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 65 00 00 00 06 02 01 00 00 00 80  
+16:50:23.072 [Thread-12] INFO  net - Net Client Clear 
+16:50:23.321 [pool-11-thread-8] INFO  net - Net Client Clear 
+16:50:23.587 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 65 00 00 00 06 02 04 00 00 00 08  
+16:50:23.727 [pool-12-thread-8] INFO  net - Net Client Clear 
+16:50:24.088 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 66 00 00 00 06 02 02 00 00 00 80  
+16:50:24.150 [pool-13-thread-8] INFO  net - Net Client Clear 
+16:50:24.229 [Thread-13] INFO  net - Net Client Clear 
+16:50:24.601 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 66 00 00 00 06 02 01 00 00 00 80  
+16:50:24.618 [pool-14-thread-8] INFO  net - Net Client Clear 
+16:50:25.104 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 66 00 00 00 06 02 04 00 00 00 08  
+16:50:25.614 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 67 00 00 00 06 02 02 00 00 00 80  
+16:50:25.773 [Thread-12] INFO  net - Net Client Clear 
+16:50:25.867 [pool-11-thread-8] INFO  net - Net Client Clear 
+16:50:26.119 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 67 00 00 00 06 02 01 00 00 00 80  
+16:50:26.288 [pool-12-thread-8] INFO  net - Net Client Clear 
+16:50:26.628 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 67 00 00 00 06 02 04 00 00 00 08  
+16:50:26.706 [pool-13-thread-8] INFO  net - Net Client Clear 
+16:50:26.752 [Thread-13] INFO  net - Net Client Clear 
+16:50:27.141 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 68 00 00 00 06 02 02 00 00 00 80  
+16:50:27.172 [pool-14-thread-8] INFO  net - Net Client Clear 
+16:50:27.656 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 68 00 00 00 06 02 01 00 00 00 80  
+16:50:28.170 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 68 00 00 00 06 02 04 00 00 00 08  
+16:50:28.466 [Thread-12] INFO  net - Net Client Clear 
+16:50:28.671 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 69 00 00 00 06 02 02 00 00 00 80  
+16:50:29.175 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 69 00 00 00 06 02 01 00 00 00 80  
+16:50:29.319 [Thread-13] INFO  net - Net Client Clear 
+16:50:29.350 [pool-3-thread-1] INFO  net - Net Client Clear 
+16:50:29.684 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 69 00 00 00 06 02 04 00 00 00 08  
+16:50:30.191 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6A 00 00 00 06 02 02 00 00 00 80  
+16:50:30.442 [pool-10-thread-1] INFO  net - Net Client Clear 
+16:50:30.693 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6A 00 00 00 06 02 01 00 00 00 80  
+16:50:30.833 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:50:31.099 [Thread-12] INFO  net - Net Client Clear 
+16:50:31.207 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6A 00 00 00 06 02 04 00 00 00 08  
+16:50:31.254 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:50:31.721 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:50:31.721 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6B 00 00 00 06 02 02 00 00 00 80  
+16:50:31.845 [Thread-13] INFO  net - Net Client Clear 
+16:50:32.140 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:50:32.234 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6B 00 00 00 06 02 01 00 00 00 80  
+16:50:32.744 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6B 00 00 00 06 02 04 00 00 00 08  
+16:50:33.259 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6C 00 00 00 06 02 02 00 00 00 80  
+16:50:33.434 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:50:33.768 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6C 00 00 00 06 02 01 00 00 00 80  
+16:50:33.784 [Thread-12] INFO  net - Net Client Clear 
+16:50:33.800 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:50:34.277 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:50:34.277 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6C 00 00 00 06 02 04 00 00 00 08  
+16:50:34.357 [Thread-13] INFO  net - Net Client Clear 
+16:50:34.704 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:50:34.782 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6D 00 00 00 06 02 02 00 00 00 80  
+16:50:35.287 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6D 00 00 00 06 02 01 00 00 00 80  
+16:50:35.801 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6D 00 00 00 06 02 04 00 00 00 08  
+16:50:36.005 [pool-11-thread-1] INFO  net - Net Client Clear 
+16:50:36.303 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6E 00 00 00 06 02 02 00 00 00 80  
+16:50:36.350 [pool-12-thread-1] INFO  net - Net Client Clear 
+16:50:36.428 [Thread-12] INFO  net - Net Client Clear 
+16:50:36.818 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6E 00 00 00 06 02 01 00 00 00 80  
+16:50:36.833 [pool-13-thread-1] INFO  net - Net Client Clear 
+16:50:37.006 [Thread-13] INFO  net - Net Client Clear 
+16:50:37.240 [pool-14-thread-1] INFO  net - Net Client Clear 
+16:50:37.319 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6E 00 00 00 06 02 04 00 00 00 08  
+16:50:37.823 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6F 00 00 00 06 02 02 00 00 00 80  
+16:50:38.331 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6F 00 00 00 06 02 01 00 00 00 80  
+16:50:38.833 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 6F 00 00 00 06 02 04 00 00 00 08  
+16:50:39.116 [Thread-12] INFO  net - Net Client Clear 
+16:50:39.337 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 70 00 00 00 06 02 02 00 00 00 80  
+16:50:39.431 [pool-3-thread-2] INFO  net - Net Client Clear 
+16:50:39.525 [Thread-13] INFO  net - Net Client Clear 
+16:50:39.841 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 70 00 00 00 06 02 01 00 00 00 80  
+16:50:40.110 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:50:40.346 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 70 00 00 00 06 02 04 00 00 00 08  
+16:50:40.470 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:50:40.533 [pool-10-thread-2] INFO  net - Net Client Clear 
+16:50:40.829 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:50:40.861 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 71 00 00 00 06 02 02 00 00 00 80  
+16:50:40.907 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:50:41.205 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:50:41.345 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:50:41.361 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 71 00 00 00 06 02 01 00 00 00 80  
+16:50:41.534 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:50:41.739 [Thread-12] INFO  net - Net Client Clear 
+16:50:41.802 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:50:41.817 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:50:41.865 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 71 00 00 00 06 02 04 00 00 00 08  
+16:50:42.054 [Thread-13] INFO  net - Net Client Clear 
+16:50:42.198 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:50:42.215 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:50:42.374 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 72 00 00 00 06 02 02 00 00 00 80  
+16:50:42.707 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:50:42.879 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 72 00 00 00 06 02 01 00 00 00 80  
+16:50:43.130 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:50:43.394 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 72 00 00 00 06 02 04 00 00 00 08  
+16:50:43.470 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:50:43.908 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:50:43.908 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 73 00 00 00 06 02 02 00 00 00 80  
+16:50:44.348 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:50:44.378 [Thread-12] INFO  net - Net Client Clear 
+16:50:44.409 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 73 00 00 00 06 02 01 00 00 00 80  
+16:50:44.582 [Thread-13] INFO  net - Net Client Clear 
+16:50:44.738 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:50:44.911 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 73 00 00 00 06 02 04 00 00 00 08  
+16:50:45.412 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 74 00 00 00 06 02 02 00 00 00 80  
+16:50:45.913 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 74 00 00 00 06 02 01 00 00 00 80  
+16:50:46.008 [pool-11-thread-2] INFO  net - Net Client Clear 
+16:50:46.419 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 74 00 00 00 06 02 04 00 00 00 08  
+16:50:46.450 [pool-12-thread-2] INFO  net - Net Client Clear 
+16:50:46.895 [pool-13-thread-2] INFO  net - Net Client Clear 
+16:50:46.927 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 75 00 00 00 06 02 02 00 00 00 80  
+16:50:47.005 [Thread-12] INFO  net - Net Client Clear 
+16:50:47.098 [Thread-13] INFO  net - Net Client Clear 
+16:50:47.290 [pool-14-thread-2] INFO  net - Net Client Clear 
+16:50:47.431 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 75 00 00 00 06 02 01 00 00 00 80  
+16:50:47.932 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 75 00 00 00 06 02 04 00 00 00 08  
+16:50:48.447 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 76 00 00 00 06 02 02 00 00 00 80  
+16:50:48.961 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 76 00 00 00 06 02 01 00 00 00 80  
+16:50:49.476 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 76 00 00 00 06 02 04 00 00 00 08  
+16:50:49.491 [pool-3-thread-3] INFO  net - Net Client Clear 
+16:50:49.649 [Thread-12] INFO  net - Net Client Clear 
+16:50:49.742 [Thread-13] INFO  net - Net Client Clear 
+16:50:49.979 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 77 00 00 00 06 02 02 00 00 00 80  
+16:50:50.486 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 77 00 00 00 06 02 01 00 00 00 80  
+16:50:50.612 [pool-10-thread-3] INFO  net - Net Client Clear 
+16:50:50.992 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 77 00 00 00 06 02 04 00 00 00 08  
+16:50:50.992 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:50:51.431 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:50:51.492 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 78 00 00 00 06 02 02 00 00 00 80  
+16:50:51.898 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:50:52.007 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 78 00 00 00 06 02 01 00 00 00 80  
+16:50:52.271 [Thread-13] INFO  net - Net Client Clear 
+16:50:52.287 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:50:52.303 [Thread-12] INFO  net - Net Client Clear 
+16:50:52.521 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 78 00 00 00 06 02 04 00 00 00 08  
+16:50:53.035 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 79 00 00 00 06 02 02 00 00 00 80  
+16:50:53.540 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 79 00 00 00 06 02 01 00 00 00 80  
+16:50:53.587 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:50:54.006 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:50:54.054 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 79 00 00 00 06 02 04 00 00 00 08  
+16:50:54.493 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:50:54.557 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7A 00 00 00 06 02 02 00 00 00 80  
+16:50:54.797 [Thread-13] INFO  net - Net Client Clear 
+16:50:54.829 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:50:54.940 [Thread-12] INFO  net - Net Client Clear 
+16:50:55.067 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7A 00 00 00 06 02 01 00 00 00 80  
+16:50:55.568 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7A 00 00 00 06 02 04 00 00 00 08  
+16:50:56.083 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7B 00 00 00 06 02 02 00 00 00 80  
+16:50:56.146 [pool-11-thread-3] INFO  net - Net Client Clear 
+16:50:56.566 [pool-12-thread-3] INFO  net - Net Client Clear 
+16:50:56.598 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7B 00 00 00 06 02 01 00 00 00 80  
+16:50:57.047 [pool-13-thread-3] INFO  net - Net Client Clear 
+16:50:57.110 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7B 00 00 00 06 02 04 00 00 00 08  
+16:50:57.317 [Thread-13] INFO  net - Net Client Clear 
+16:50:57.364 [pool-14-thread-3] INFO  net - Net Client Clear 
+16:50:57.567 [Thread-12] INFO  net - Net Client Clear 
+16:50:57.614 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7C 00 00 00 06 02 02 00 00 00 80  
+16:50:58.116 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7C 00 00 00 06 02 01 00 00 00 80  
+16:50:58.622 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7C 00 00 00 06 02 04 00 00 00 08  
+16:50:59.130 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7D 00 00 00 06 02 02 00 00 00 80  
+16:50:59.566 [pool-3-thread-4] INFO  net - Net Client Clear 
+16:50:59.645 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7D 00 00 00 06 02 01 00 00 00 80  
+16:50:59.832 [Thread-13] INFO  net - Net Client Clear 
+16:51:00.159 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7D 00 00 00 06 02 04 00 00 00 08  
+16:51:00.206 [Thread-12] INFO  net - Net Client Clear 
+16:51:00.675 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7E 00 00 00 06 02 02 00 00 00 80  
+16:51:00.690 [pool-10-thread-4] INFO  net - Net Client Clear 
+16:51:01.096 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:51:01.189 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7E 00 00 00 06 02 01 00 00 00 80  
+16:51:01.516 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:51:01.704 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7E 00 00 00 06 02 04 00 00 00 08  
+16:51:01.984 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:51:02.173 [nioEventLoopGroup-4-1] INFO  net - 192.168.1.101:2001 Reconnect 
+16:51:02.219 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7F 00 00 00 06 02 02 00 00 00 80  
+16:51:02.376 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:51:02.503 [nioEventLoopGroup-5-1] INFO  net - 192.168.1.102:5001 Reconnect 
+16:51:02.518 [Thread-13] INFO  net - Net Client Clear 
+16:51:02.723 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7F 00 00 00 06 02 01 00 00 00 80  
+16:51:02.882 [nioEventLoopGroup-6-1] INFO  net - 192.168.1.102:5002 Reconnect 
+16:51:02.897 [Thread-12] INFO  net - Net Client Clear 
+16:51:03.226 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 7F 00 00 00 06 02 04 00 00 00 08  
+16:51:03.242 [nioEventLoopGroup-7-1] INFO  net - 192.168.1.102:5004 Reconnect 
+16:51:03.570 [nioEventLoopGroup-8-1] INFO  net - 192.168.1.102:5005 Reconnect 
+16:51:03.648 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:51:03.728 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 80 00 00 00 06 02 02 00 00 00 80  
+16:51:03.869 [nioEventLoopGroup-9-1] INFO  net - 192.168.1.150:3434 Reconnect 
+16:51:04.057 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:51:04.229 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 80 00 00 00 06 02 01 00 00 00 80  
+16:51:04.260 [nioEventLoopGroup-10-1] INFO  net - 192.168.1.151:3434 Reconnect 
+16:51:04.541 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:51:04.731 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 80 00 00 00 06 02 04 00 00 00 08  
+16:51:04.763 [nioEventLoopGroup-11-1] INFO  net - 192.168.1.152:3434 Reconnect 
+16:51:04.917 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:51:05.041 [Thread-13] INFO  net - Net Client Clear 
+16:51:05.183 [nioEventLoopGroup-12-1] INFO  net - 192.168.1.153:3434 Reconnect 
+16:51:05.246 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 81 00 00 00 06 02 02 00 00 00 80  
+16:51:05.528 [Thread-12] INFO  net - Net Client Clear 
+16:51:05.747 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 81 00 00 00 06 02 01 00 00 00 80  
+16:51:06.186 [pool-11-thread-4] INFO  net - Net Client Clear 
+16:51:06.248 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 81 00 00 00 06 02 04 00 00 00 08  
+16:51:06.608 [pool-12-thread-4] INFO  net - Net Client Clear 
+16:51:06.751 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 82 00 00 00 06 02 02 00 00 00 80  
+16:51:07.086 [pool-13-thread-4] INFO  net - Net Client Clear 
+16:51:07.262 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 82 00 00 00 06 02 01 00 00 00 80  
+16:51:07.466 [pool-14-thread-4] INFO  net - Net Client Clear 
+16:51:07.577 [Thread-13] INFO  net - Net Client Clear 
+16:51:07.777 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 82 00 00 00 06 02 04 00 00 00 08  
+16:51:08.154 [Thread-12] INFO  net - Net Client Clear 
+16:51:08.278 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 83 00 00 00 06 02 02 00 00 00 80  
+16:51:08.791 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 83 00 00 00 06 02 01 00 00 00 80  
+16:51:09.305 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 83 00 00 00 06 02 04 00 00 00 08  
+16:51:09.649 [pool-3-thread-5] INFO  net - Net Client Clear 
+16:51:09.808 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 84 00 00 00 06 02 02 00 00 00 80  
+16:51:10.153 [Thread-13] INFO  net - Net Client Clear 
+16:51:10.309 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 84 00 00 00 06 02 01 00 00 00 80  
+16:51:10.770 [pool-10-thread-5] INFO  net - Net Client Clear 
+16:51:10.817 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 84 00 00 00 06 02 04 00 00 00 08  
+16:51:10.833 [Thread-12] INFO  net - Net Client Clear 
+16:51:11.167 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:51:11.327 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 85 00 00 00 06 02 02 00 00 00 80  
+16:51:11.579 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:51:11.832 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 85 00 00 00 06 02 01 00 00 00 80  
+16:51:12.066 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:51:12.333 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 85 00 00 00 06 02 04 00 00 00 08  
+16:51:12.488 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:51:12.676 [Thread-13] INFO  net - Net Client Clear 
+16:51:12.846 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 86 00 00 00 06 02 02 00 00 00 80  
+16:51:13.347 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 86 00 00 00 06 02 01 00 00 00 80  
+16:51:13.486 [Thread-12] INFO  net - Net Client Clear 
+16:51:13.720 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:51:13.861 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 86 00 00 00 06 02 04 00 00 00 08  
+16:51:14.126 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:51:14.373 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 87 00 00 00 06 02 02 00 00 00 80  
+16:51:14.658 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:51:14.878 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 87 00 00 00 06 02 01 00 00 00 80  
+16:51:15.086 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:51:15.373 [Thread-13] INFO  net - Net Client Clear 
+16:51:15.389 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 87 00 00 00 06 02 04 00 00 00 08  
+16:51:15.891 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 88 00 00 00 06 02 02 00 00 00 80  
+16:51:16.173 [Thread-12] INFO  net - Net Client Clear 
+16:51:16.282 [pool-11-thread-5] INFO  net - Net Client Clear 
+16:51:16.392 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 88 00 00 00 06 02 01 00 00 00 80  
+16:51:16.677 [pool-12-thread-5] INFO  net - Net Client Clear 
+16:51:16.895 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 88 00 00 00 06 02 04 00 00 00 08  
+16:51:17.209 [pool-13-thread-5] INFO  net - Net Client Clear 
+16:51:17.399 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 89 00 00 00 06 02 02 00 00 00 80  
+16:51:17.636 [pool-14-thread-5] INFO  net - Net Client Clear 
+16:51:17.888 [Thread-13] INFO  net - Net Client Clear 
+16:51:17.904 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 89 00 00 00 06 02 01 00 00 00 80  
+16:51:18.407 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 89 00 00 00 06 02 04 00 00 00 08  
+16:51:18.796 [Thread-12] INFO  net - Net Client Clear 
+16:51:18.908 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 8A 00 00 00 06 02 02 00 00 00 80  
+16:51:19.418 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 8A 00 00 00 06 02 01 00 00 00 80  
+16:51:19.704 [pool-3-thread-6] INFO  net - Net Client Clear 
+16:51:19.926 [Thread-10] INFO  net - Net Client Send - sendByteList Add: 00 8A 00 00 00 06 02 04 00 00 00 08  
+16:51:20.412 [Thread-13] INFO  net - Net Client Clear 

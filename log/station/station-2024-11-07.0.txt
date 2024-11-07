@@ -1,0 +1,821 @@
+14:56:57.795 [main] INFO  c.grean.station.StationApplication - Starting StationApplication on OS-20210616DNXR with PID 13504 (D:\wlw\target\classes started by Administrator in D:\wlw) 
+14:56:57.798 [main] INFO  c.grean.station.StationApplication - The following profiles are active: dev 
+14:56:57.885 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f8285e: startup date [Thu Nov 07 14:56:57 CST 2024]; root of context hierarchy 
+14:56:57.918 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath 
+14:56:59.090 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'websocketContainerCustomizer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$JettyWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$JettyWebSocketConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration.class]] 
+14:57:00.294 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 164 (http) 
+14:57:00.323 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+14:57:00.323 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31 
+14:57:00.330 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files (x86)\Java\jdk1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Siemens\Automation\Simatic OAM\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NetSarang\Xshell 7\;D:\hlb-zx\c\w64devkit-1.20.0\w64devkit\bin;D:\hlb-zx\python3.8.10;D:\hlb-zx\python3.8.10\Scripts;D:\apache-maven-3.5.3\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Java\jdk1.8.0_191\bin;D:\hlb-zx\Microsoft VS Code\bin;.] 
+14:57:00.501 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+14:57:00.502 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2618 ms 
+14:57:00.818 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+14:57:00.824 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+14:57:00.825 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+14:57:00.825 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+14:57:00.825 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+14:57:01.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@b4aac2 
+14:57:01.623 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'historyController': Unsatisfied dependency expressed through field 'stationInfoService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stationInfoService': Invocation of init method failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.grean.station.dao.CfgMapper.getCfgDevList 
+14:57:01.627 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat] 
+14:57:01.639 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+14:57:01.652 [main] ERROR o.s.boot.SpringApplication - Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'historyController': Unsatisfied dependency expressed through field 'stationInfoService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stationInfoService': Invocation of init method failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.grean.station.dao.CfgMapper.getCfgDevList
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.grean.station.StationApplication.main(StationApplication.java:28)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stationInfoService': Invocation of init method failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.grean.station.dao.CfgMapper.getCfgDevList
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:138)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:424)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1700)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 19 common frames omitted
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.grean.station.dao.CfgMapper.getCfgDevList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:214)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy72.getCfgDevList(Unknown Source)
+	at com.grean.station.service.query.StationInfoService.Init(StationInfoService.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:365)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:135)
+	... 31 common frames omitted
+16:47:37.102 [main] INFO  c.grean.station.StationApplication - Starting StationApplication on OS-20210616DNXR with PID 11852 (D:\wlw\target\classes started by Administrator in D:\wlw) 
+16:47:37.106 [main] INFO  c.grean.station.StationApplication - The following profiles are active: dev 
+16:47:37.185 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb6851: startup date [Thu Nov 07 16:47:37 CST 2024]; root of context hierarchy 
+16:47:37.232 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath 
+16:47:38.234 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'websocketContainerCustomizer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$JettyWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$JettyWebSocketConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration.class]] 
+16:47:39.463 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 164 (http) 
+16:47:39.508 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+16:47:39.509 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31 
+16:47:39.518 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files (x86)\Java\jdk1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Siemens\Automation\Simatic OAM\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NetSarang\Xshell 7\;D:\hlb-zx\c\w64devkit-1.20.0\w64devkit\bin;D:\hlb-zx\python3.8.10;D:\hlb-zx\python3.8.10\Scripts;D:\apache-maven-3.5.3\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Java\jdk1.8.0_191\bin;D:\hlb-zx\Microsoft VS Code\bin;.] 
+16:47:39.740 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+16:47:39.740 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2555 ms 
+16:47:39.926 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+16:47:39.932 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+16:47:39.932 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+16:47:39.932 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+16:47:39.932 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+16:47:40.208 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@b4aac2 
+16:47:41.286 [main] DEBUG com.zaxxer.hikari.HikariConfig - ServerHikariCP - configuration: 
+16:47:41.288 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false 
+16:47:41.288 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true 
+16:47:41.288 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none 
+16:47:41.288 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none 
+16:47:41.289 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1" 
+16:47:41.289 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............15000 
+16:47:41.289 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none 
+16:47:41.289 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none 
+16:47:41.289 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none 
+16:47:41.289 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>} 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver" 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{} 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailFast..........true 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbc4ConnectionTest.............false 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/grean_station?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false 
+16:47:41.290 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........180000 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................100 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................5 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked> 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"ServerHikariCP" 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutorService........internal 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal 
+16:47:41.291 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default 
+16:47:41.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root" 
+16:47:41.292 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............180000 
+16:47:41.292 [main] INFO  com.zaxxer.hikari.HikariDataSource - ServerHikariCP - Starting... 
+16:47:41.463 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@219f6a 
+16:47:41.465 [main] INFO  com.zaxxer.hikari.HikariDataSource - ServerHikariCP - Start completed. 
+16:47:41.567 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=1, active=0, idle=1, waiting=0) 
+16:47:41.568 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=1, active=0, idle=1, waiting=0) 
+16:47:41.575 [ServerHikariCP connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ed524e 
+16:47:41.581 [ServerHikariCP connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@18570a5 
+16:47:41.587 [ServerHikariCP connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@766094 
+16:47:41.594 [ServerHikariCP connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@8e93b9 
+16:47:41.595 [ServerHikariCP connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After adding stats (total=5, active=0, idle=5, waiting=0) 
+16:47:41.819 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+16:47:42.133 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb6851: startup date [Thu Nov 07 16:47:37 CST 2024]; root of context hierarchy 
+16:47:42.246 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dev/do_cmd],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.devDoCmd(com.grean.station.domain.request.DevCmd) 
+16:47:42.247 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_zeros_flag],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListZeroFlag() 
+16:47:42.247 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_factors_five],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListFactorFive() 
+16:47:42.247 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_year_report],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyYearReport(com.grean.station.domain.request.DateRange) 
+16:47:42.248 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_hours_flag],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListHourFlag() 
+16:47:42.248 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_month_report],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyMonthReport(com.grean.station.domain.request.DateRange) 
+16:47:42.248 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_month_report],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_month_report(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.248 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_day_report],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_day_report(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.249 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_factors],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListFactor() 
+16:47:42.249 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_devices],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListDevices() 
+16:47:42.249 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_year_report],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_year_report(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.249 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_exceptions],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_exceptions(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.250 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_spans_flag],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListSpanFlag() 
+16:47:42.250 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/open_quality_point],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationOpenQualityPoint(com.grean.station.domain.request.ReqQualityCmd) 
+16:47:42.250 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_runnings],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_runnings(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.250 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/do_quality_cmd],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationDoQualityCmd(com.grean.station.domain.request.ReqQualityCmd) 
+16:47:42.251 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/set_quality_param],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationSetQualityParam(com.grean.station.domain.request.QualityInfo) 
+16:47:42.251 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/set_pump_cal_vol],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationSetPumpCalVol(com.grean.station.domain.request.ReqQualityCmd) 
+16:47:42.251 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/alarm/export_datas],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_alarm_data(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.251 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_devices],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_devices(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.251 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/close_quality_point],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationCloseQualityPoint(com.grean.station.domain.request.ReqQualityCmd) 
+16:47:42.252 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_samples],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_samples(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.252 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/net/upload_data_network],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.uploadDataNetwork(com.grean.station.domain.request.DateHead) 
+16:47:42.252 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_access],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_access(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.252 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/net/upload_stop_network],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.uploadStopNetwork(com.grean.station.domain.request.DateHead) 
+16:47:42.253 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_platforms],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_platforms(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.253 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/export_audits],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_log_audits(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.253 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_report],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_report(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.253 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_flow_datas],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.flowListData(com.grean.station.domain.request.DateRange) 
+16:47:42.254 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_ranges],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_range(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.254 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_hours],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListHour(com.grean.station.domain.request.DateRange) 
+16:47:42.254 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_fives],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_Five(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.254 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_zeros],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListZero(com.grean.station.domain.request.DateRange) 
+16:47:42.254 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_day_report],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyDayReport(com.grean.station.domain.request.DateRange) 
+16:47:42.255 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_zeros],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_zeros(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.255 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_real],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_real(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.255 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_mins],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListMin(com.grean.station.domain.request.DateRange) 
+16:47:42.255 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_fives],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyListFive(com.grean.station.domain.request.DateRange) 
+16:47:42.256 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_hours_draw],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyDrawHour(com.grean.station.domain.request.DateRange) 
+16:47:42.256 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_real_factors],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.realListFactor() 
+16:47:42.256 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_range_datas],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.rangeListData(com.grean.station.domain.request.DateRange) 
+16:47:42.256 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_range_factors],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.rangeListFactor() 
+16:47:42.257 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_report],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.historyReport(com.grean.station.domain.request.DateRange) 
+16:47:42.257 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_flow_factors],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.FlowListFactor() 
+16:47:42.257 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_real_datas],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.realListData(com.grean.station.domain.request.DateRange) 
+16:47:42.257 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_hours],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_history(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.257 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/export_flow],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_flow(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.258 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_spans],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListSpan(com.grean.station.domain.request.DateRange) 
+16:47:42.258 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_spans],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_spans(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.258 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_rcvrs],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListRcvr(com.grean.station.domain.request.DateRange) 
+16:47:42.258 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_blanks],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_blanks(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.259 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/open_plc],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationOpenPlc(java.lang.Integer) 
+16:47:42.259 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/reset_plc],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationClosePlc() 
+16:47:42.259 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/close_plc],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationClosePlc(java.lang.Integer) 
+16:47:42.259 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/get_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.devListInfo() 
+16:47:42.259 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dev/get_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.devListInfo(java.lang.Integer) 
+16:47:42.260 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_stds],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListStd(com.grean.station.domain.request.DateRange) 
+16:47:42.260 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_fives],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_fives(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.260 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_rcvrs],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_rcvrs(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.260 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_pars],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_pars(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.261 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/do_cmd],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.stationDoCmd(java.lang.Integer) 
+16:47:42.261 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/get_quality_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.devQualityInfo() 
+16:47:42.261 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/alarm/get_datas],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.alarmListData(com.grean.station.domain.request.DateRange) 
+16:47:42.261 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_blanks],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListBlank(com.grean.station.domain.request.DateRange) 
+16:47:42.262 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/export_stds],methods=[POST]}" onto public void com.grean.station.controller.HistoryController.export_stds(javax.servlet.http.HttpServletResponse,com.grean.station.domain.request.DateRange) throws java.io.UnsupportedEncodingException 
+16:47:42.262 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/get_version],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.devVersionInfo() 
+16:47:42.262 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_pars],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListPar(com.grean.station.domain.request.DateRange) 
+16:47:42.262 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check/get_fives],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.checkListFive(com.grean.station.domain.request.DateRange) 
+16:47:42.263 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_audits],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListAudit(com.grean.station.domain.request.DateRange) 
+16:47:42.263 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/net/upload_data_com],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.uploadDataCom(com.grean.station.domain.request.DateHead) 
+16:47:42.263 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/history/get_platform_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.getPlatformList() 
+16:47:42.263 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/net/upload_stop_com],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.uploadStopCom(com.grean.station.domain.request.DateHead) 
+16:47:42.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_devices],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListDevices(com.grean.station.domain.request.DateRange) 
+16:47:42.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_runnings],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListRunning(com.grean.station.domain.request.DateRange) 
+16:47:42.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_samples],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListSample(com.grean.station.domain.request.DateRange) 
+16:47:42.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/net/upload_data],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.uploadData(com.grean.station.domain.request.DateHead) 
+16:47:42.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_platforms],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListPlatforms(com.grean.station.domain.request.DateRange) 
+16:47:42.265 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/net/upload_stop],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.uploadStop(com.grean.station.domain.request.DateHead) 
+16:47:42.265 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/alarm/get_devs],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.alarmListDev(com.grean.station.domain.request.DateRange) 
+16:47:42.265 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_exceptions],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListException(com.grean.station.domain.request.DateRange) 
+16:47:42.265 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/get_access],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.HistoryController.logListAccess(com.grean.station.domain.request.DateRange) 
+16:47:42.266 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/check_qrcode],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.LogController.checkQrCode(java.lang.String) 
+16:47:42.266 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload_log],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.LogController.uploadLog(com.grean.station.domain.request.SendLogInfo) 
+16:47:42.267 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/station/cancel_reset],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.RealTimeController.stationClosePlc() 
+16:47:42.268 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/realtime/get_data],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.RealTimeController.realtimeGetData() 
+16:47:42.268 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/realtime/get_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.RealTimeController.realtimeGetInfo() 
+16:47:42.268 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/realtime/get_status],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.RealTimeController.realtimeGetStatus() 
+16:47:42.268 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/realtime/get_reset_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.RealTimeController.realtimeGetResetInfo() 
+16:47:42.290 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/admin/get_user_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getUserInfo() 
+16:47:42.291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_month_plan],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setMonthPlan(java.util.List<com.grean.station.domain.request.ScheduleMonth>) 
+16:47:42.291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_control_empty],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doControlEmpty(com.grean.station.domain.request.SampleControl) 
+16:47:42.291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_running],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getRunning() 
+16:47:42.291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_running],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setRunning(javax.servlet.http.HttpServletRequest,com.grean.station.domain.request.RunningInfo) 
+16:47:42.291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_sample],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setSample(com.grean.station.domain.DO.cfg.CfgSample) 
+16:47:42.291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_sample],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getSample() 
+16:47:42.292 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_control_sample],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doControlSample(com.grean.station.domain.request.SampleControl) 
+16:47:42.292 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_network_upload],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getNetworkUpload() 
+16:47:42.292 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_upload],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setUpload(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.UploadInfo>) 
+16:47:42.292 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_sample_modes],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getSampleModes() 
+16:47:42.293 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_upload],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getUpload() 
+16:47:42.293 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_sample_empty],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doSampleEmpty() 
+16:47:42.293 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_sample_plan],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getSamplePlan() 
+16:47:42.293 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_network_upload],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setNetworkUpload(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.UploadInfo>) 
+16:47:42.293 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_station],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setStation(javax.servlet.http.HttpServletRequest,com.grean.station.domain.DO.cfg.CfgStation) 
+16:47:42.294 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_day_plan],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getDayPlan() 
+16:47:42.294 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_month_plan],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getMonthPlan() 
+16:47:42.294 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_plan_factor],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getPlanFactor() 
+16:47:42.294 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_sample_quantity],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doSampleQuantity() 
+16:47:42.294 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_sample_plc],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doSamplePlc() 
+16:47:42.294 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_sample_reset],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doSampleReset() 
+16:47:42.295 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_sample_state],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doSampleState() 
+16:47:42.295 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_day_plan],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setDayPlan(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.ScheduleDay>) 
+16:47:42.295 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/do_script_jump],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.doScriptJump() 
+16:47:42.296 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_sample_plan],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setSamplePlan(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.ScheduleSample>) 
+16:47:42.296 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_station],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getStation() 
+16:47:42.296 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_error_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getErrorInfo() 
+16:47:42.296 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/update_login_time],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.updateLoginTime(com.grean.station.domain.request.LoginTime) 
+16:47:42.296 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_com_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getComInfo() 
+16:47:42.296 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_net_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getNetInfo() 
+16:47:42.297 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/active_net_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.activeNetInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetNetInfo>) 
+16:47:42.297 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_user_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setUserInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetUserInfo>) 
+16:47:42.297 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_span_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getSpanInfo() 
+16:47:42.297 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_error_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setErrorInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetErrorVal>) 
+16:47:42.298 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_com_upload],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getComUpload() 
+16:47:42.298 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_drift_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setDriftInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetDriftVal>) 
+16:47:42.298 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_recovery_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getRecoveryInfo() 
+16:47:42.298 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_com_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setComInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetComInfo>) 
+16:47:42.299 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_net_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setNetInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetNetInfo>) 
+16:47:42.299 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_state_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getStateInfo() 
+16:47:42.299 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_span_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setSpanInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetSpanVal>) 
+16:47:42.299 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_devtype_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getDevTypeInfo() 
+16:47:42.300 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_protocol_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getProtocolInfo(java.lang.String) 
+16:47:42.300 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_protocol_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getProtocolInfo() 
+16:47:42.300 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/active_com_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.activeComInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetComInfo>) 
+16:47:42.300 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_standard_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getStandardInfo() 
+16:47:42.300 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_com_upload],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setComUpload(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.UploadInfo>) 
+16:47:42.301 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_recovery_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setRecoveryInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetRcvrVal>) 
+16:47:42.301 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_drift_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getDriftInfo() 
+16:47:42.301 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_standard_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setStandardInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetStdVal>) 
+16:47:42.301 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_interface_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getInterfaceInfo() 
+16:47:42.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/active_factor_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.activeFactorInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetFactorInfo>) 
+16:47:42.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_plc_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getPlcInfo() 
+16:47:42.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_plc_q],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getPlcQInfo() 
+16:47:42.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_plc_q],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setPlcQInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.PlcQInfo>) 
+16:47:42.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_plc_i],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getPlcIInfo() 
+16:47:42.302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_plc_ai],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getPlcAIInfo() 
+16:47:42.303 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_protocol_query],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getProtocolQuery(com.grean.station.domain.request.ReqUserModbus) 
+16:47:42.303 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_relate_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getRelateInfo() 
+16:47:42.303 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_factor_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getFactorList() 
+16:47:42.303 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_plc_ai],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setPlcAIInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.PlcAIInfo>) 
+16:47:42.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_protocol_query],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setProtocolQuery(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.ProtocolQuery>) 
+16:47:42.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_five_check],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getFiveCheckCmd() 
+16:47:42.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_factor_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getFactorInfo() 
+16:47:42.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_plc_i],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setPlcIInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.PlcQInfo>) 
+16:47:42.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_plc_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setPlcInfo(javax.servlet.http.HttpServletRequest,com.grean.station.domain.request.PlcInfo) 
+16:47:42.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_unit_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getUnitList() 
+16:47:42.305 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_device_param],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getDeviceParam() 
+16:47:42.305 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_five_check],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setFiveCheckCmd(com.grean.station.domain.request.ReqFiveCheck) 
+16:47:42.305 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_protocol_cmd],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getProtocolCmd(com.grean.station.domain.request.ReqUserModbus) 
+16:47:42.305 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_std_check],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getStdCheckCmd() 
+16:47:42.305 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_std_check],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setStdCheckCmd(com.grean.station.domain.request.ReqStdCheck) 
+16:47:42.306 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_factor_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setFactorInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetFactorInfo>) 
+16:47:42.306 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_protocol_cmd],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setProtocolCmd(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.ProtocolCmd>) 
+16:47:42.306 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_dev_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getDevList() 
+16:47:42.306 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_device_param],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setDeviceParam(javax.servlet.http.HttpServletRequest,com.grean.station.domain.request.SetDeviceParam) 
+16:47:42.306 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_five_setting],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getFiveSetting() 
+16:47:42.307 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_five_setting],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setFiveSetting(javax.servlet.http.HttpServletRequest,com.grean.station.domain.request.ReqFiveInfo) 
+16:47:42.307 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_camera],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getCameraInfo() 
+16:47:42.307 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_camera_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getCameraInfos() 
+16:47:42.307 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_camera],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setCameraInfo(javax.servlet.http.HttpServletRequest,com.grean.station.domain.DO.cfg.CfgCamera) 
+16:47:42.307 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_flow_setting],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setFlowSetting(javax.servlet.http.HttpServletRequest,com.grean.station.domain.DO.cfg.CfgFlow) 
+16:47:42.307 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/run_std_check],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.runStdCheckCmd(com.grean.station.domain.request.ReqStdCheck) 
+16:47:42.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_server_com_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getServerComList() 
+16:47:42.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_dev_model],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setDevModel(com.grean.station.domain.request.DevModel) 
+16:47:42.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/stop_std_check],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.stopStdCheckCmd(com.grean.station.domain.request.ReqStdCheck) 
+16:47:42.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_rcvr_type],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getRcvrType() 
+16:47:42.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_server_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getServerList() 
+16:47:42.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_rcvr_type],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setRcvyType(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.RcvrType>) 
+16:47:42.309 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_dev_interval],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setDevInterval(com.grean.station.domain.request.DevInterval) 
+16:47:42.309 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/load_camera],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.loadCameraInfo() 
+16:47:42.309 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_flow_setting],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getFlowSetting() 
+16:47:42.309 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_upload_protocols],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getUploadProtocols() 
+16:47:42.309 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_data_format_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getDataFormatList() 
+16:47:42.309 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_instrument_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getInstrumentInfo() 
+16:47:42.310 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_instrument_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setInstrumentInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetInstrumentInfo>) 
+16:47:42.310 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/active_instrument_info],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.activeInstrumentInfo(javax.servlet.http.HttpServletRequest,java.util.List<com.grean.station.domain.request.SetInstrumentInfo>) 
+16:47:42.310 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_schedule_quality],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getScheduleQuality() 
+16:47:42.310 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_server_network_list],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getServerNetworkList() 
+16:47:42.310 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/get_encryption_code],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.getEncryptionCode(java.lang.String) 
+16:47:42.311 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/setting/set_schedule_quality],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.SettingController.setScheduleQuality(javax.servlet.http.HttpServletRequest,com.grean.station.domain.request.ReqScheduleQuality) 
+16:47:42.312 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/update_access],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.UserController.updateAccess(com.grean.station.domain.request.UpdatePassword) 
+16:47:42.312 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/updatepwd],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.UserController.updatePassword(com.grean.station.domain.request.UpdatePassword) 
+16:47:42.313 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/close],methods=[POST]}" onto public void com.grean.station.controller.UserController.closeSystem(java.lang.String) 
+16:47:42.313 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public com.grean.station.domain.meta.ApiResponse com.grean.station.controller.UserController.login(com.grean.station.domain.request.LoginForm) 
+16:47:42.313 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/ssologin]}" onto public java.lang.String com.grean.station.controller.UserController.ssoLogin() 
+16:47:42.315 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+16:47:42.322 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+16:47:42.383 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+16:47:42.383 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+16:47:42.434 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandler 
+16:47:42.726 [main] WARN  org.flywaydb.core.Flyway - sqlMigrationSuffix has been deprecated and will be removed in Flyway 6.0.0. Use sqlMigrationSuffixes instead. 
+16:47:42.743 [main] INFO  o.f.c.internal.util.VersionPrinter - Flyway Community Edition 5.0.7 by Boxfuse 
+16:47:42.746 [main] INFO  o.f.c.i.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/grean_station (MySQL 5.6) 
+16:47:42.895 [main] INFO  o.f.c.internal.command.DbValidate - Successfully validated 71 migrations (execution time 00:00.102s) 
+16:47:42.928 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `grean_station`: 1.0.70 
+16:47:42.929 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `grean_station` is up to date. No migration necessary. 
+16:47:43.412 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup 
+16:47:43.420 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure 
+16:47:43.427 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource] 
+16:47:43.487 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 164 (http) with context path '' 
+16:47:43.491 [main] INFO  c.grean.station.StationApplication - Started StationApplication in 7.238 seconds (JVM running for 8.696) 
+16:47:48.404 [main] INFO  o.s.s.a.AnnotationAsyncExecutionInterceptor - No task executor bean found for async processing: no bean of type TaskExecutor and no bean named 'taskExecutor' either 
+16:47:48.483 [main] INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only) 
+16:47:48.565 [nioEventLoopGroup-15-1] INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 166 
+16:47:50.082 [pool-3-thread-1] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:47:51.157 [pool-10-thread-1] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:47:51.523 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:47:51.944 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:47:52.364 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:47:52.800 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:47:54.076 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:47:54.504 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:47:54.933 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:47:55.365 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:47:56.634 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:47:57.054 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:47:57.477 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:47:57.961 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:00.177 [pool-3-thread-2] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:48:01.237 [pool-10-thread-2] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:48:01.569 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:48:02.039 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:48:02.413 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:48:02.899 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:48:04.115 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:48:04.606 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:48:04.969 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:48:05.456 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:48:06.676 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:48:07.169 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:48:07.533 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:48:08.025 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:10.323 [pool-3-thread-3] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:48:11.375 [pool-10-thread-3] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:48:11.582 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:48:11.582 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:48:11.662 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:48:12.170 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:48:12.521 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:48:13.031 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:48:14.220 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:48:14.726 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:48:15.066 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:48:15.584 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:48:16.777 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:48:16.841 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:17.144 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:48:17.303 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:48:17.634 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:48:18.146 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:19.517 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:19.700 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:48:20.357 [pool-3-thread-4] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:48:21.387 [pool-10-thread-4] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:48:21.749 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:48:22.138 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:22.201 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:48:22.216 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:48:22.590 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:48:23.041 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:48:24.356 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:48:24.751 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:48:24.751 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:48:24.767 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:25.148 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:48:25.587 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:48:26.902 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:48:27.264 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:48:27.296 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:48:27.388 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:27.744 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:48:28.182 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:29.905 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:48:30.031 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:30.407 [pool-3-thread-5] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:48:31.466 [pool-10-thread-5] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:48:31.844 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:48:32.288 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:48:32.431 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:48:32.669 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:32.685 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:48:33.158 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:48:34.392 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:48:34.830 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:48:35.003 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:48:35.286 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:48:35.302 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:35.696 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:48:36.948 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:48:37.393 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:48:37.536 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:48:37.851 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:48:37.945 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:38.257 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:40.107 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:48:40.467 [pool-3-thread-6] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:48:40.622 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:41.544 [pool-10-thread-6] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:48:41.591 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:48:41.591 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:48:41.951 [pool-11-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:48:42.373 [pool-12-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:48:42.762 [pool-13-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:48:42.778 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:48:43.215 [pool-14-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:48:43.310 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:44.541 [pool-11-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:48:44.980 [pool-12-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:48:45.298 [pool-13-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:48:45.298 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:48:45.756 [pool-14-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:48:45.961 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:47.089 [pool-11-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:48:47.526 [pool-12-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:48:47.866 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:48:47.897 [pool-13-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:48:48.291 [pool-14-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:48.592 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:50.396 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:48:50.567 [pool-3-thread-7] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:48:51.269 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:51.626 [pool-10-thread-7] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:48:52.078 [pool-11-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:48:52.482 [pool-12-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:48:52.933 [pool-13-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:48:52.980 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:48:53.376 [pool-14-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:48:53.919 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:54.641 [pool-11-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:48:55.046 [pool-12-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:48:55.481 [pool-13-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:48:55.670 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:48:55.920 [pool-14-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:48:56.606 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:48:57.247 [pool-11-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:48:57.598 [pool-12-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:48:58.029 [pool-13-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:48:58.220 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:48:58.489 [pool-14-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:48:59.237 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:00.720 [pool-3-thread-8] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:49:00.737 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:49:01.739 [pool-10-thread-8] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:49:01.866 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:02.121 [pool-11-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:49:02.548 [pool-12-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:49:02.969 [pool-13-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:49:03.266 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:49:03.438 [pool-14-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:49:04.561 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:04.717 [pool-11-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:49:05.154 [pool-12-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:49:05.580 [pool-13-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:49:05.801 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:49:05.991 [pool-14-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:49:07.212 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:07.275 [pool-11-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:49:07.716 [pool-12-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:49:08.142 [pool-13-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:49:08.445 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:49:08.555 [pool-14-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:49:09.842 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:10.780 [pool-3-thread-1] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:49:10.971 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:49:11.603 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:49:11.603 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:49:11.853 [pool-10-thread-1] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:49:12.243 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:49:12.463 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:12.634 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:49:13.059 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:49:13.483 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:49:13.530 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:49:14.818 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:49:15.102 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:15.197 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:49:15.622 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:49:15.997 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:49:16.090 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:49:17.415 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:49:17.791 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:49:17.791 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:18.169 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:49:18.533 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:49:18.645 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:49:20.424 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:20.847 [pool-3-thread-2] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:49:21.220 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:49:21.912 [pool-10-thread-2] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:49:22.290 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:49:22.719 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:49:23.050 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:23.129 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:49:23.619 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:49:23.746 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:49:24.847 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:49:25.272 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:49:25.680 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:25.680 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:49:26.165 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:49:26.261 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:49:27.395 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:49:27.818 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:49:28.222 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:49:28.363 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:28.723 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:49:28.848 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:49:30.900 [pool-3-thread-3] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:49:30.996 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:31.375 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:49:31.989 [pool-10-thread-3] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:49:32.380 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:49:32.801 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:49:33.193 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:49:33.675 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:33.754 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:49:34.066 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:49:34.927 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:49:35.341 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:49:35.756 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:49:36.308 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:36.323 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:49:36.603 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:49:37.486 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:49:37.894 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:49:38.299 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:49:38.864 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:49:38.928 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:39.118 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:49:40.986 [pool-3-thread-4] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:49:41.568 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:41.615 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:49:41.615 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:49:41.646 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:49:42.053 [pool-10-thread-4] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:49:42.457 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:49:42.851 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:49:43.281 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:49:43.758 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:49:44.186 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:49:44.202 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:45.020 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:49:45.409 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:49:45.829 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:49:46.358 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:49:46.873 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:49:46.889 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:47.628 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:49:47.961 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:49:48.389 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:49:48.924 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:49:49.391 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:49:49.579 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:51.098 [pool-3-thread-5] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:49:51.974 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:49:52.133 [pool-10-thread-5] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:49:52.213 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:52.546 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:49:52.939 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:49:53.391 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:49:53.846 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:49:54.487 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:49:54.909 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:55.084 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:49:55.490 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:49:55.931 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:49:56.391 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:49:57.009 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:49:57.544 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:49:57.638 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:49:58.043 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:49:58.479 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:49:58.933 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:49:59.646 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:50:00.180 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:01.110 [pool-3-thread-6] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:50:02.185 [pool-10-thread-6] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:50:02.217 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:50:02.623 [pool-11-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:50:02.857 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:03.090 [pool-12-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:50:03.511 [pool-13-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:50:03.978 [pool-14-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:50:04.752 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:50:05.183 [pool-11-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:50:05.494 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:05.651 [pool-12-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:50:06.070 [pool-13-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:50:06.522 [pool-14-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:50:07.333 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:50:07.789 [pool-11-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:50:08.195 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:08.258 [pool-12-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:50:08.624 [pool-13-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:50:09.068 [pool-14-thread-6] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:50:09.855 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:50:10.882 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:11.272 [pool-3-thread-7] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:50:11.523 [nioEventLoopGroup-16-1] WARN  c.c.s.handler.AuthorizeHandler - Blocked wrong request! url: /, ip: /127.0.0.1:63332 
+16:50:11.619 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:50:11.619 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:50:12.295 [pool-10-thread-7] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:50:12.485 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:50:12.721 [pool-11-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:50:13.167 [pool-12-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:50:13.514 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:13.578 [pool-13-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:50:14.031 [pool-14-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:50:15.002 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:50:15.267 [pool-11-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:50:15.767 [pool-12-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:50:16.127 [pool-13-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:50:16.189 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:16.567 [pool-14-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:50:17.534 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:50:17.837 [pool-11-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:50:18.323 [pool-12-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:50:18.684 [pool-13-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:50:18.824 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:19.121 [pool-14-thread-7] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:50:20.103 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:50:21.283 [pool-3-thread-8] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:50:21.458 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:22.382 [pool-10-thread-8] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:50:22.618 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:50:22.806 [pool-11-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:50:23.227 [pool-12-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:50:23.650 [pool-13-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:50:24.104 [pool-14-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:50:24.135 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:25.232 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:50:25.359 [pool-11-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:50:25.773 [pool-12-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:50:26.196 [pool-13-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:50:26.659 [pool-14-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:50:26.829 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:27.810 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:50:27.950 [pool-11-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:50:28.374 [pool-12-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:50:28.795 [pool-13-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:50:29.207 [pool-14-thread-8] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:50:29.476 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:30.331 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:50:31.364 [pool-3-thread-1] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:50:32.156 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:32.500 [pool-10-thread-1] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:50:32.797 [http-nio-164-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet' 
+16:50:32.797 [http-nio-164-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started 
+16:50:32.830 [http-nio-164-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms 
+16:50:32.846 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:50:32.925 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:50:33.290 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:50:33.768 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:50:34.197 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:50:34.799 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:35.366 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:50:35.490 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:50:35.848 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:50:36.319 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:50:36.739 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:50:37.490 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:38.015 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:50:38.045 [pool-11-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:50:38.395 [pool-12-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:50:38.881 [pool-13-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:50:39.290 [pool-14-thread-1] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:50:40.124 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:40.533 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:50:41.439 [pool-3-thread-2] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:50:41.629 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:50:41.629 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:50:42.548 [pool-10-thread-2] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:50:42.754 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:42.958 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:50:43.067 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:50:43.394 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:50:43.845 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:50:44.236 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:50:45.380 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:45.505 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:50:45.583 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:50:45.945 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:50:46.386 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:50:46.784 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:50:48.009 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:48.057 [pool-11-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:50:48.105 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:50:48.493 [pool-12-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:50:48.930 [pool-13-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:50:49.383 [pool-14-thread-2] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:50:50.675 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:50.755 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:50:51.508 [pool-3-thread-3] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:50:52.615 [pool-10-thread-3] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:50:53.081 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:50:53.273 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:50:53.304 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:53.492 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:50:53.990 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:50:54.321 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:50:55.631 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:50:55.802 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:50:55.943 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:56.052 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:50:56.534 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:50:56.861 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:50:57.186 [http-nio-164-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported 
+16:50:58.180 [pool-11-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:50:58.323 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:50:58.575 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:50:58.606 [pool-12-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:50:59.098 [pool-13-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:50:59.410 [pool-14-thread-3] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:51:00.892 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:51:01.267 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:01.626 [pool-3-thread-4] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:51:02.692 [pool-10-thread-4] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:51:03.133 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:51:03.523 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:51:03.555 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:51:03.900 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:04.026 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:51:04.416 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:51:05.685 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:51:06.046 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:51:06.093 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:51:06.530 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:06.577 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:51:06.959 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:51:08.232 [pool-11-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:51:08.636 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询水温(5)失败 
+16:51:08.652 [pool-12-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:51:09.120 [pool-13-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:51:09.212 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:09.556 [pool-14-thread-4] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:51:11.167 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询电导率(5)失败 
+16:51:11.642 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before cleanup stats (total=5, active=0, idle=5, waiting=0) 
+16:51:11.642 [ServerHikariCP housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After cleanup  stats (total=5, active=0, idle=5, waiting=0) 
+16:51:11.673 [pool-3-thread-5] INFO  com.grean.station.utils.Utility - EnvWsdModbus: 查询失败，通道0，无返回 
+16:51:11.848 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:12.784 [pool-10-thread-5] INFO  com.grean.station.utils.Utility - Grasp9320 Sample: 查询失败，通道0，无返回 
+16:51:13.206 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮测量数据区失败，通道0，无返回 
+16:51:13.611 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数测量数据区失败，通道0，无返回 
+16:51:13.736 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询溶解氧(5)失败 
+16:51:14.156 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷测量数据区失败，通道0，无返回 
+16:51:14.546 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:14.578 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮测量数据区失败，通道0，无返回 
+16:51:15.768 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮状态告警区失败，通道0，无返回 
+16:51:16.173 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数状态告警区失败，通道0，无返回 
+16:51:16.377 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询pH(5)失败 
+16:51:16.709 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷状态告警区失败，通道0，无返回 
+16:51:17.131 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮状态告警区失败，通道0，无返回 
+16:51:17.178 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:18.328 [pool-11-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询氨氮关键参数区失败，通道0，无返回 
+16:51:18.718 [pool-12-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询高锰酸盐指数关键参数区失败，通道0，无返回 
+16:51:18.892 [Thread-13] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询浊度(5)失败 
+16:51:19.259 [pool-13-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总磷关键参数区失败，通道0，无返回 
+16:51:19.688 [pool-14-thread-5] INFO  com.grean.station.utils.Utility - Modbus Dev: 查询总氮关键参数区失败，通道0，无返回 
+16:51:19.816 [Thread-12] INFO  com.grean.station.utils.Utility - Modbus Dev: 自定义Modbus协议查询瞬时流量(5)失败 
+16:51:20.374 [Thread-5] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb6851: startup date [Thu Nov 07 16:47:37 CST 2024]; root of context hierarchy 
+16:51:20.378 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown 
+16:51:20.379 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans 
+16:51:20.384 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - ServerHikariCP - Shutdown initiated... 
+16:51:20.384 [Thread-5] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - Before shutdown stats (total=5, active=0, idle=5, waiting=0) 
+16:51:20.386 [ServerHikariCP connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - ServerHikariCP - Closing connection com.mysql.cj.jdbc.ConnectionImpl@219f6a: (connection evicted) 
+16:51:20.388 [ServerHikariCP connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - ServerHikariCP - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1ed524e: (connection evicted) 
+16:51:20.388 [ServerHikariCP connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - ServerHikariCP - Closing connection com.mysql.cj.jdbc.ConnectionImpl@18570a5: (connection evicted) 
+16:51:20.388 [ServerHikariCP connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - ServerHikariCP - Closing connection com.mysql.cj.jdbc.ConnectionImpl@766094: (connection evicted) 
+16:51:20.388 [ServerHikariCP connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - ServerHikariCP - Closing connection com.mysql.cj.jdbc.ConnectionImpl@8e93b9: (connection evicted) 
+16:51:20.389 [Thread-5] DEBUG com.zaxxer.hikari.pool.HikariPool - ServerHikariCP - After shutdown stats (total=0, active=0, idle=0, waiting=0) 
+16:51:20.389 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - ServerHikariCP - Shutdown completed. 
