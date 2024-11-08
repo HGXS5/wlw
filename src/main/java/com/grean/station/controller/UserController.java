@@ -10,12 +10,13 @@ import com.grean.station.domain.request.LoginForm;
 import com.grean.station.domain.request.UpdatePassword;
 import com.grean.station.service.ShutdownService;
 import com.grean.station.service.UserLoginService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+@Api(tags = "用户管理")
 @RestController
 @RequestMapping({"/api"})
 public class UserController {

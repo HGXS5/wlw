@@ -7,11 +7,13 @@ package com.grean.station.controller;
 
 import com.grean.station.domain.meta.ApiResponse;
 import com.grean.station.service.query.RealTimeService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Api(tags = "实时数据")
 @RestController
 @RequestMapping({"/api"})
 public class RealTimeController {

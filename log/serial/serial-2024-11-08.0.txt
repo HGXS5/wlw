@@ -1,0 +1,3 @@
+10:41:09.146 [main] INFO  serial - Open Com1 Failed 
+10:41:09.349 [main] INFO  serial - Open Com2 Failed 
+10:41:13.591 [main] INFO  serial - Open Com14 Failed 
